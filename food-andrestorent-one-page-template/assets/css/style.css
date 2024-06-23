@@ -394,11 +394,12 @@ Button
     margin-top: 30px;
     color: #fff;
 }
+
 button.btn-lg{
     padding: 10px;
     font-size: 1.2rem;
     border-radius: 4px;
-    width: 200px;
+    width: 300px;
     border: 1px solid #fff;
     text-transform: none;
     transition: .6s;
@@ -409,7 +410,6 @@ button.btn-lg{
 	line-height: 1.5em;
 }
 
-}
 button.btn-lg:hover{
 	background:#d6962c;
 	color:#fff;
