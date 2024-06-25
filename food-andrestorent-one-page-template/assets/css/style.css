@@ -1032,10 +1032,10 @@ a.navbar-brand.our_logo{
 	
 }
 
-/* Chef Section */
+/* Team Section */
 
-.chef{
-    background: url(../images/bgchef.jpg) top center no-repeat scroll;
+.Team{
+    background: url(../images/bgTeam.jpg) top center no-repeat scroll;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
