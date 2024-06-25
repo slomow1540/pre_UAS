@@ -664,7 +664,7 @@ a.navbar-brand.our_logo{
 }
 
 .main_slider .main_slider_content h1{
-font-size: 6rem;
+    font-size: 6rem;
     font-family: 'Pacifico', cursive;
     color: #fff;
     line-height: 6rem;
@@ -814,26 +814,68 @@ font-size: 6rem;
 }
 
 
-/* Abouts Section css */
+/* Events Section css */
 
-.abouts{
-	background: url(../images/abtbg.jpg) no-repeat center top scroll;
+.events{
+	background: url(../images/eventbg.png) no-repeat center top scroll;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
+  height: 500px;
   overflow: hidden;
 }
-.abouts_content{
-	padding:120px 0px;
-	display:inline-block;
+
+.events_content {
+    margin-top: 50px;
+    padding: 120px 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
 }
-.single_abouts_text h4{
-	color:#000000;
+
+.single_events_text {
+    text-align: center; 
 }
-.single_abouts_text h3{
-	color:#000000;	
+
+.single_events_text h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: dimgray;
+    letter-spacing: .25em;
+    text-align: center;
+}
+
+.event_little {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event_little .icon {
+    background: gray;
+    height: 1px;
+    flex: 1;
+    content: ""
+}
+
+.event_little h4 {
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
+    color: gray;
+    line-height: 5rem;
+    margin: 10px 0;
+}
+
+.choice{
+    background:url(../images/eventlist.jpg) center center no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	overflow: hidden;	
 }
 
 
