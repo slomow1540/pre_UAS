@@ -24,38 +24,55 @@ jQuery(document).ready(function ($) {
 		event.preventDefault();
 	});
 
-	// Testimonial Section
-	let customers = ["Clarinda Ardith", "Milo Carlton", "Kimber Leigh"];
-	let texts = [
-    "I am very impressed with the service provided by this restaurant. In addition to the delicious food, the staff is also friendly and helpful. Highly recommended!",
-    "The dining experience at this restaurant is truly outstanding. Every dish has a unique and delightful flavor. I will definitely come back again!",
-    "I recently discovered this hidden gem of a restaurant, and I am so glad I did! The flavors are bold and exciting, and the presentation is impeccable. I can't wait to bring my friends here to experience it for themselves."
-	];
+	var currindex = 0;
+    displaySlides(currindex);
 
-	let currentIndex = 0; 
-	const testimonialText = document.querySelector('.testimoni-text p');
-	const customerName = document.querySelector('.customer-name p');
-
-	function displayTestimonial(index) {
-		testimonialText.textContent = texts[index];
-		customerName.textContent = customers[index];
+	function nexttestimony(n){
+		displaySlides(currindex += n);
 	}
-
-	displayTestimonial(currentIndex);
 
 	const leftImage = document.querySelector('.testimoni-text img:first-child');
 	const rightImage = document.querySelector('.testimoni-text img:last-child');
-
 	leftImage.addEventListener('click', function() {
-		currentIndex = (currentIndex == 0) ? (texts.length - 1) : (currentIndex - 1);
-		displayTestimonial(currentIndex);
+		displaySlides(currindex -= 1)
 	});
 
 	rightImage.addEventListener('click', function() {
-		currentIndex = (currentIndex == texts.length - 1) ? 0 : (currentIndex + 1);
-		displayTestimonial(currentIndex);
+		displaySlides(currindex += 1)
 	});
-	//End Testimonial Section
+	
+	function displaySlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("contentlol");
+		var current;
+		
+		for (i = 0; i < slides.length; i++) {
+		  if (slides[i].style.display != "none") 
+			  current = slides[i];
+		}
+
+		if (n > slides.length) {
+			currindex = 1
+		}
+		if (n < 1) {
+			currindex = slides.length
+		}
+		
+		current.classList.remove("active");
+		current.classList.add("inactive");
+		
+		setTimeout(() => {
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].classList.remove("active", "inactive");
+			slides[i].style.display = "none";
+		  }
+		
+		  slides[currindex - 1].classList.remove("inactive");
+		  slides[currindex - 1].style.display = "block";
+		  slides[currindex - 1].classList.add("active");
+		}, 500) // 1s is the animation hence we time out for 1000 mils 
+
+	  }
 	
 	jQuery(window).scroll(function () {
 	  var top = jQuery(document).scrollTop();
@@ -78,7 +95,7 @@ jQuery(document).ready(function ($) {
         }
     });
     $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 1000);
+        $("html, body").animate({ scrollTop: 0 }, 200);
         return false;
     }); 
  

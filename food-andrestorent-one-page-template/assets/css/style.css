@@ -780,8 +780,11 @@ a.navbar-brand.our_logo{
 .testimoni-text {
     display: flex;
     align-items: center; 
-    margin: 50px 20px;
+    margin-left: 20%;
+    margin-right: 50%;
     transition-duration: 0ms;
+    width: 720px;
+    height: 350px;
 }
 
 .testimoni-text p {
@@ -1197,3 +1200,17 @@ a.navbar-brand.our_logo{
 	text-decoration: none;
 
 }
+
+.active{
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .inactive{
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
