@@ -1025,12 +1025,7 @@ a.navbar-brand.our_logo{
 	text-align:left;
 }
 
-.single_pakeg_text ul li{
-    background: url(../images/pkli.png) no-repeat left center;
-    padding: 15px 0px 15px 60px;
-    margin-top: 20px;
-	
-}
+
 
 /* Team Section */
 
@@ -1213,4 +1208,26 @@ a.navbar-brand.our_logo{
     animation-name: fadeOut;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
+  }
+  .tooltippopup{
+    display: flex;
+    flex-direction: row;
+    width: 1020px;
+    height: 50px;
+  }
+  .tooltippopup .tooltippopuptext {
+    visibility: hidden;
+    margin-top: 20px;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltippopup:hover .tooltippopuptext {
+    visibility: visible;
   }
