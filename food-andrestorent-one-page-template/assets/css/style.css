@@ -845,7 +845,7 @@ a.navbar-brand.our_logo{
 .single_events_text h1 {
     font-size: 70px;
     font-weight: 700;
-    color: dimgray;
+    color: #fff;
     letter-spacing: .25em;
     text-align: center;
 }
@@ -866,7 +866,7 @@ a.navbar-brand.our_logo{
 .event_little h4 {
     font-size: 20px;
     font-family: 'Pacifico', cursive;
-    color: gray;
+    color: #fff;
     line-height: 5rem;
     margin: 10px 0;
 }
@@ -881,6 +881,61 @@ a.navbar-brand.our_logo{
 	overflow: hidden;	
 }
 
+.eventorshow {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.eventorshow button{
+    padding: 10px;
+    border: none;
+    background: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.eventorshow button:hover{
+    border-radius: 5px;
+    background-color: bisque;
+    cursor: pointer;
+}
+
+.item-button{
+    margin: 10px;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+}
+.item-button img{
+    width: 100%;
+}
+
+.item-button .icon {
+    margin: 10px;
+    background: #cc9a48;
+    height: 3px;
+    flex: 1;
+    content: ""
+}
+
+.item-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-info .item-left{
+    border: 1px solid red;
+    margin: 0;
+    width: 20%;
+}
+
+.item-info .item-right{
+    border: 1px solid yellow;
+    margin: 0;
+}
 
 /* Features section css */
 .features{
@@ -1102,9 +1157,11 @@ a.navbar-brand.our_logo{
 	width: 100%;
 	overflow: hidden;
 }
+
 .footer_widget_content{
 	color:#fff;
 }
+
 .single_widget{
 	padding-bottom: 50px;
 	padding-top:60px;
