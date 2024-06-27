@@ -9,6 +9,18 @@ Author URI: http://bootstrapthemes.co
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 html,
 body {
     background-color: #1E2E3B;
@@ -902,6 +914,12 @@ a.navbar-brand.our_logo{
     cursor: pointer;
 }
 
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .item-button{
     margin: 10px;
     width: 400px;
@@ -910,6 +928,7 @@ a.navbar-brand.our_logo{
 }
 .item-button img{
     width: 100%;
+    height: 57%;
 }
 
 .item-button .icon {
@@ -927,14 +946,28 @@ a.navbar-brand.our_logo{
 }
 
 .item-info .item-left{
-    border: 1px solid red;
-    margin: 0;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
     width: 20%;
 }
 
-.item-info .item-right{
-    border: 1px solid yellow;
+.item-left h3 {
     margin: 0;
+    color: dimgray;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 25px;
+}
+
+.item-info .item-right{
+    margin: 0;
+    margin-top: 10px;
+    color: dimgray;
+}
+
+.item-right h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 /* Features section css */
