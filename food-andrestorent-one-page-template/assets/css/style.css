@@ -912,13 +912,18 @@ a.navbar-brand.our_logo{
     border-radius: 5px;
     background-color: bisque;
     cursor: pointer;
-}
+}b
 
 .event-container{
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.event-container ul{
+    display: flex;
+    flex-direction: row;
 }
 
 .item-button{
