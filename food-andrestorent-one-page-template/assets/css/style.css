@@ -1127,20 +1127,26 @@ a.navbar-brand.our_logo{
 	text-align:left;
 }
 
-
-
-/* Team Section */
-
-.Team{
-    background: url(../images/bgTeam.jpg) top center no-repeat scroll;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    overflow: hidden;
+/* Reservation Section */
+.reservation-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
+.group-fill{
+    margin: 20px;
+}
+
+.group-fill label{
+    font-size: 16px;
+}
+.group-fill input[type='text']{
+    padding: .375rem .75rem;
+    width: 250;
+    height: 50px;
+}
 /* Mobail Apps Section css */
 
 .mobailapps{
