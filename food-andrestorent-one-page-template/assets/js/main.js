@@ -16,6 +16,10 @@ jQuery(document).ready(function ($) {
 		$("html, body").animate({scrollTop: 0}, 2000);
 		return false;
 	});
+	jQuery('#btn-lg-animated').click(function () {
+		$([document.documentElement, document.body]).animate({scrollTop: $("#targeteventcontaineranimate").offset().top}, 1000);
+		return false;
+	});
 
 	jQuery('.nav a').bind('click', function () {
 		$('html , body').stop().animate({
