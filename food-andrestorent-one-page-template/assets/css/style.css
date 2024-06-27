@@ -931,6 +931,7 @@ a.navbar-brand.our_logo{
     width: 400px;
     height: 400px;
     background-color: white;
+    transition: transform .2s;
 }
 
 .item-button img{
@@ -945,6 +946,10 @@ a.navbar-brand.our_logo{
     flex: 1;
     content: ""
 }
+
+.item-button:hover {
+    transform: scale(1.15);
+  }
 
 .item-info{
     display: flex;
