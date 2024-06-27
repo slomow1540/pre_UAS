@@ -1266,6 +1266,23 @@ a.navbar-brand.our_logo{
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
   }
+
+  .activeA{
+    opacity: 0;
+    display: block;
+    animation-name: fadeIn;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  
+  .inactiveA{
+    opacity: 0;
+    display: none;
+    animation-name: fadeOut;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+  }
+
   .tooltippopup{
     display: flex;
     flex-direction: row;

@@ -40,6 +40,44 @@ jQuery(document).ready(function ($) {
 	rightImage.addEventListener('click', function() {
 		displaySlides(currindex += 1)
 	});
+
+
+	// stuff for the swithing page
+
+	var currPage =".HomeGroup";
+
+	const HomeButton = document.querySelector('.TopBarHome');
+	HomeButton.addEventListener('click', function() {
+		displayPage(".HomeGroup",currPage)
+		currPage = ".HomeGroup";
+	});
+	const MenuButton = document.querySelector('.TopBarMenu');
+	MenuButton.addEventListener('click', function() {
+		displayPage(".MenuGroup",currPage)
+		currPage = ".MenuGroup";
+	});
+	const EventButton = document.querySelector('.TopBarEvent');
+	EventButton.addEventListener('click', function() {
+		displayPage(".EventGroup",currPage)
+		currPage = ".EventGroup";
+	});
+
+	function displayPage(gotopage,currentpage){
+		if (gotopage == currentpage){}
+		else{
+			const currentpageA = document.querySelector(currentpage);
+			const pagewanttogo = document.querySelector(gotopage);
+			currentpageA.classList.remove("activeA");
+			currentpageA.classList.add("inactiveA");
+			pagewanttogo.classList.remove("inactiveA");
+			pagewanttogo.classList.add("activeA");
+			
+		}
+		
+	}
+
+
+	// end of stuff for swithcing page
 	
 	function displaySlides(n) {
 		var i;
@@ -73,6 +111,8 @@ jQuery(document).ready(function ($) {
 		}, 500) // 1s is the animation hence we time out for 1000 mils 
 
 	  }
+
+
 	
 	jQuery(window).scroll(function () {
 	  var top = jQuery(document).scrollTop();

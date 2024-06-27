@@ -1,8 +1,11 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<html class="no-js" lang="">
+<!-- searh helper
+Home Section
+Menu Section
+event Section
+-->
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -30,9 +33,6 @@
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 		<div class='preloader'><div class='loaded'>&nbsp;</div></div>
         <header id="home" class="navbar-fixed-top">
             <div class="header_top_menu clearfix">	
@@ -84,11 +84,11 @@
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="#slider">Home</a></li>
-                                        <li><a href="event.html">Events</a></li>
+                                        <li><a href="#Home" class="TopBarHome">Home</a></li>
+                                        <li><a href="#Event" class="TopBarEvent">Events</a></li>
                                         <li><a href="feature.html">Features</a></li>
                                         <li><a href="portfolio.html">Recommendation</a></li>
-                                        <li><a href="ourPakeg.html">Menu</a></li>
+                                        <li><a href="#Menu" class="TopBarMenu">Menu</a></li>
                                         <li><a href="team.html">Teams</a></li>
                                         <li><a href="#mobaileapps">Pages</a></li>
                                         <li><a href="reservation.html" class="booking">Reservation</a></li>
@@ -101,120 +101,229 @@
             </div>	
         </header> <!-- End Header Section -->
 
-        <section id="slider" class="slider">
-            <div class="slider_overlay">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_slider text-center">
-                            <div class="col-md-12">
-                                <div class="main_slider_content wow zoomIn" data-wow-duration="1s">
-                                    <h1>Food Restaurant</h1>
-                                    <p>Simple Dish with Amazing Taste </p>
-                                    <a href="feature.html"><button class="btn-lg">Check Out Our New Features</button></a>
-                                </div>
-                            </div>	
+        <!-- Home Section-->
+        <div class="HomeGroup activeA">
+            <section id="slider" class="slider">
+                <div class="slider_overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="main_slider text-center">
+                                <div class="col-md-12">
+                                    <div class="main_slider_content wow zoomIn" data-wow-duration="1s">
+                                        <h1>Food Restaurant</h1>
+                                        <p>Simple Dish with Amazing Taste </p>
+                                        <a href="feature.html"><button class="btn-lg">Check Out Our New Features</button></a>
+                                    </div>
+                                </div>	
+                            </div>
+    
                         </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="profil" class="profil">
+                <div class="slider_overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="main_picture wow fadeInUp" data-wow-duration="2s" style="padding: 0 150px;">
+                                    <div class="icon"></div>
+                                    <h4>&ensp;Our Profiles&ensp;</h4>
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="main_profil wow slideInLeft" data-wow-duration="2s">
+                                    <img src="assets/images/chibiboy.jpg" alt="" />
+                                    <div class="profile_content">
+                                        <h2>Elvis Florence</h2>
+                                        <h6>Seorang pencinta rasa dan kreativitas, mendedikasikan hidup untuk membangun pengalaman kuliner yang memikat dan tak terlupakan di setiap piring, satu restoran pada satu waktu</h6>
+                                    </div>
+                                </div>
+                                <div class="main_profil wow slideInRight" data-wow-duration="2s" style="margin-bottom: 75px;">
+                                    <div class="profile_content">
+                                        <h2 style="text-align: right;">Sharren Brianna Jono</h2>
+                                        <h6 style="text-align: justify;">Dengan setiap hidangan, kami bercerita tentang perjalanan cita rasa dan kebahagiaan. Bergabunglah dengan kami di perjalanan kuliner yang memikat, di bawah naungan restoran kami yang penuh inovasi dan kehangatan</h6>
+                                    </div>
+                                    <img src="assets/images/chibigirl.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>      
+            <section id="testimonial" class="testimonial">
+                <div class="slider_overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="main_picture wow fadeInDown" data-wow-duration="2s">
+                                    <div class="icon"></div>
+                                    <h4>&ensp;Testimonials&ensp;</h4>
+                                    <div class="icon"></div>
+                                </div>
+                                <div class="plain-text wow zoomIn" data-wow-duration="2s">
+                                    <h2>OUR CUSTOMERS SAY</h2>
+                                </div>
+                                <div class="testimoni-text">
+                                    <img src="assets/images/left.png" alt="" />
+                                    <div class="contentlol active">
+                                        <p>"I am very impressed with the service provided by this restaurant. In addition to the delicious food, the staff is also friendly and helpful. Highly recommended!"</p>
+                                        <div class="customer-name">
+                                            <p style="margin-bottom: 100px;">"Clarinda Ardith"</p>
+                                        </div>
+                                    </div>
+                                    <div class="contentlol inactive">
+                                        <p>"The dining experience at this restaurant is truly outstanding. Every dish has a unique and delightful flavor. I will definitely come back again!"</p>
+                                        <div class="customer-name">
+                                            <p style="margin-bottom: 100px;">"Milo Carlton"</p>
+                                        </div>
+                                    </div>
+                                    <div class="contentlol inactive">
+                                        <p>"I recently discovered this hidden gem of a restaurant, and I am so glad I did! The flavors are bold and exciting, and the presentation is impeccable. I can't wait to bring my friends here to experience it for themselves."</p>
+                                        <div class="customer-name">
+                                            <p style="margin-bottom: 100px;">"Kimber Leigh"</p>
+                                        </div>
+                                    </div>
+                                    <img src="assets/images/right.png" alt="" />
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="mobaileapps" class="mobailapps">
+                <div class="slider_overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="main_mobail_apps_content wow zoomIn">
+                                <div class="col-md-5 col-sm-12 text-center">
+                                    <img src="assets/images/iphone.png" alt="" />
+                                </div>
+                                <div class="col-md-7 col-sm-12">
+                                    <div class="single_monail_apps_text">
+                                        <h4> Happy to Announce </h4>
+                                        <h1>Mobile App <span>is Available in every OS platform.</span></h1>
+    
+                                        <a href=""><img src="assets/images/google.png" alt="" /></a>
+                                        <a href=""><img src="assets/images/apps.png" alt="" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>  
+        </div>
 
+        <!-- Menu Section-->
+        <div class="MenuGroup inactiveA">
+            <section id="ourPakeg" class="ourPakeg">
+                <div class="container">
+                    <div class="main_pakeg_content">
+                        <div class="row">
+                            <div class="head_title text-center">
+                                <h4>Amazing</h4>
+                                <h3>Delicious</h3>
+                            </div>
+    
+                            <div class="single_pakeg_one text-right wow rotateInDownRight">
+                                <div class="col-md-12 col-md col-sm-4 col-sm">
+                                    <div class="single_pakeg_text">
+                                        <div class="pakeg_title">
+                                            <h4>Drinks</h4>
+                                        </div>
+    
+                                        <ul>
+                                            <li class="tooltippopup"><p class="col-md-3">Berry Bliss Smoothie</p><span class="tooltippopuptext"><img src="https://i.pinimg.com/originals/a8/15/b1/a815b15a6ca5c5479a4626ca11290b7d.jpg"></span><p class="col-md-1">$6.75</p></li>
+                                            <li class="tooltippopup"><p class="col-md-3">Tropical Sunset Cocktail</p><span class="tooltippopuptext"><img src="https://th.bing.com/th/id/OIP.t6Xu0vJnyF66fFrgNXiq_AAAAA?rs=1&pid=ImgDetMain"></span><p class="col-md-1">$10.00</p></li>
+    
+                                            <li> Matcha Madness Latte..............................................................................$5.75 </li>
+                                            <li> Citrus Splash Refresher................................................$6.00 </li>
+                                            <li> Minty Mojito Mocktail....................................................$9.00 </li>
+                                        </ul>
+                                        <div class="pakeg_title">
+                                            <h4>Main course </h4>
+                                        </div>
+    
+                                        <ul>
+                                            <li> Spaghetti Carbonara...............................................................$12.50 </li>
+                                            <li> Grilled Chicken Breast......................................................................$14.00 </li>
+                                            <li> Beef Steak...............................................................$18.00 </li>
+                                            <li> Pan-Seared Salmon....................................................................$16.50 </li>
+                                            <li> Vegetable Stir-Fry....................................................$11.00 </li>
+                                        </ul>
+    
+                                        <div class="pakeg_title">
+                                            <h4>Desserts</h4>
+                                        </div>
+    
+                                        <ul>
+                                            <li> Chocolate Lava Cake..........................................................................$6.50 </li>
+                                            <li> Tiramisu.....................................................................$5.00 </li>
+                                            <li> Cheesecake...............................................................$5.50 </li>
+                                            <li> Apple Pie....................................................................$4.50 </li>
+                                            <li> Creme Brulee..............................................................$6.00 </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--event Section-->
+        <div class="EventGroup inactiveA">
+        <!-- first thinggy-->
+        <section id="events" class="events">
+            <div class="container">
+                <div class="row">
+                    <div class="events_content">
+                        <div class="col-md-6">
+                            <div class="single_events_text">
+                                <h1>EVENTS</h1>
+                                <div class="event_little">
+                                    <div class="icon"></div>
+                                    <h4>Food Restaurant</h4>
+                                    <div class="icon"></div>
+                                </div>
+                                <a href="#choice"><button class="btn-lg">Check Out Our Events</button></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="profil" class="profil">
-            <div class="slider_overlay">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center">
-                            <div class="main_picture wow fadeInUp" data-wow-duration="2s" style="padding: 0 150px;">
-                                <div class="icon"></div>
-                                <h4>&ensp;Our Profiles&ensp;</h4>
-                                <div class="icon"></div>
+        <!-- second choises-->
+        <section id="choice" class="choice">
+            <div class="container">
+                <div class="row">
+                    <div class="eventorshow">
+                        <button type="button">EVENT</button>
+                        <button type="button">SHOW</button>
+                    </div>
+                    <div class="item-button">
+                        <img src="assets/images/aprilfoods.png" alt="" />
+                        <div class="icon"></div>
+                        <div class="item-info">
+                            <div class="item-left">
+                                <h3>01</h3>
+                                <h3>APR</h3>
                             </div>
-                            <div class="main_profil wow slideInLeft" data-wow-duration="2s">
-                                <img src="assets/images/chibiboy.jpg" alt="" />
-                                <div class="profile_content">
-                                    <h2>Elvis Florence</h2>
-                                    <h6>Seorang pencinta rasa dan kreativitas, mendedikasikan hidup untuk membangun pengalaman kuliner yang memikat dan tak terlupakan di setiap piring, satu restoran pada satu waktu</h6>
-                                </div>
-                            </div>
-                            <div class="main_profil wow slideInRight" data-wow-duration="2s" style="margin-bottom: 75px;">
-                                <div class="profile_content">
-                                    <h2 style="text-align: right;">Sharren Brianna Jono</h2>
-                                    <h6 style="text-align: justify;">Dengan setiap hidangan, kami bercerita tentang perjalanan cita rasa dan kebahagiaan. Bergabunglah dengan kami di perjalanan kuliner yang memikat, di bawah naungan restoran kami yang penuh inovasi dan kehangatan</h6>
-                                </div>
-                                <img src="assets/images/chibigirl.jpg" alt="" />
+                            <div class="item-right">
+                                <h4>APRIL FOODS DAY</h4>
+                                <h6><i class="fa fa-location-dot"></i>Food Restaurant</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        </div>
         
-        <section id="testimonial" class="testimonial">
-            <div class="slider_overlay">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center">
-                            <div class="main_picture wow fadeInDown" data-wow-duration="2s">
-                                <div class="icon"></div>
-                                <h4>&ensp;Testimonials&ensp;</h4>
-                                <div class="icon"></div>
-                            </div>
-                            <div class="plain-text wow zoomIn" data-wow-duration="2s">
-                                <h2>OUR CUSTOMERS SAY</h2>
-                            </div>
-                            <div class="testimoni-text">
-                                <img src="assets/images/left.png" alt="" />
-                                <div class="contentlol active">
-                                    <p>"I am very impressed with the service provided by this restaurant. In addition to the delicious food, the staff is also friendly and helpful. Highly recommended!"</p>
-                                    <div class="customer-name">
-                                        <p style="margin-bottom: 100px;">"Clarinda Ardith"</p>
-                                    </div>
-                                </div>
-                                <div class="contentlol inactive">
-                                    <p>"The dining experience at this restaurant is truly outstanding. Every dish has a unique and delightful flavor. I will definitely come back again!"</p>
-                                    <div class="customer-name">
-                                        <p style="margin-bottom: 100px;">"Milo Carlton"</p>
-                                    </div>
-                                </div>
-                                <div class="contentlol inactive">
-                                    <p>"I recently discovered this hidden gem of a restaurant, and I am so glad I did! The flavors are bold and exciting, and the presentation is impeccable. I can't wait to bring my friends here to experience it for themselves."</p>
-                                    <div class="customer-name">
-                                        <p style="margin-bottom: 100px;">"Kimber Leigh"</p>
-                                    </div>
-                                </div>
-                                <img src="assets/images/right.png" alt="" />
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="mobaileapps" class="mobailapps">
-            <div class="slider_overlay">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_mobail_apps_content wow zoomIn">
-                            <div class="col-md-5 col-sm-12 text-center">
-                                <img src="assets/images/iphone.png" alt="" />
-                            </div>
-                            <div class="col-md-7 col-sm-12">
-                                <div class="single_monail_apps_text">
-                                    <h4> Happy to Announce </h4>
-                                    <h1>Mobile App <span>is Available in every OS platform.</span></h1>
-
-                                    <a href=""><img src="assets/images/google.png" alt="" /></a>
-                                    <a href=""><img src="assets/images/apps.png" alt="" /></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="footer_widget" class="footer_widget">
             <div class="container">
                 <div class="row">
@@ -292,8 +401,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <!--Footer-->
         <footer id="footer" class="footer">
