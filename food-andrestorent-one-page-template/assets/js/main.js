@@ -84,8 +84,33 @@ jQuery(document).ready(function ($) {
 		}
 		
 	}
+	// end of stuff for swithcing page
 
+	// start for event/show for the swithing panel
+	var currEvents =".EventGroupList";
+	const EventGroupButton = document.querySelector('.EventGroupButton');
+	EventGroupButton.addEventListener('click', function() {
+		displayEvent(".EventGroupList",currEvents)
+		currEvents = ".EventGroupList";
+	});
+	const ShowGroupButton = document.querySelector('.ShowGroupButton');
+	ShowGroupButton.addEventListener('click', function() {
+		displayEvent(".ShowGroupList",currEvents)
+		currEvents = ".ShowGroupList";
+	});
 
+	function displayEvent(gotopage,currentpage){
+		if (gotopage == currentpage){}
+		else{
+			const currentpageA = document.querySelector(currentpage);
+			const pagewanttogo = document.querySelector(gotopage);
+			currentpageA.classList.remove("activeA");
+			currentpageA.classList.add("inactiveA");
+			pagewanttogo.classList.remove("inactiveA");
+			pagewanttogo.classList.add("activeA");
+			
+		}
+	}
 	// end of stuff for swithcing page
 	
 	function displaySlides(n) {
