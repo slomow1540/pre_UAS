@@ -832,7 +832,7 @@ a.navbar-brand.our_logo{
 /* Events Section css */
 
 .events{
-	background:url(../images/eventbg2.jpg) no-repeat center center scroll;
+	background:url(../images/eventbg.jpg) no-repeat center center scroll;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -1106,6 +1106,7 @@ a.navbar-brand.our_logo{
 	overflow:hidden;
 	margin-top:60px;
 }
+
 .single_pakeg_two{
 	background:url(../images/newstwo.jpg) right center no-repeat;
 	padding:30px;	
@@ -1113,6 +1114,7 @@ a.navbar-brand.our_logo{
 	margin-top:60px;	
 	
 }
+
 .single_pakeg_three{
 	background:url(../images/newsthree.jpg) left center no-repeat;
 	padding:30px;	
@@ -1128,24 +1130,80 @@ a.navbar-brand.our_logo{
 }
 
 /* Reservation Section */
-.reservation-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.reservation{
+    background:url(../images/reservation.png) no-repeat center top scroll;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;	
+  padding-bottom:120px;
 }
 
-.group-fill{
+.title-reservation {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.title-reservation h1 {
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1.5rem;
+    font-size: 70px;
+    font-weight: 700;
+    color: #000;
+    margin: 10px;
+}
+
+.title-reservation .icon {
+    background: #da9b31;
+    height: 3px;
+    flex: 1;
+}
+
+.title-reservation h3 {
+    font-size: 30px;
+    font-weight: 400;
+    color: #da9b31;
+    margin: 0 20px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.instruction p {
+    font-size: 20x;
+    color: #fff;
+}
+.reservation-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: flex-start;
+
+}
+
+.group-fill {
     margin: 20px;
 }
 
-.group-fill label{
+.group-fill .label {
     font-size: 16px;
 }
-.group-fill input[type='text']{
+
+.group-fill .fill-form {
     padding: .375rem .75rem;
-    width: 250;
+    width: 350px;
     height: 50px;
+}
+
+.group-fill .accept {
+    color: #fff;
 }
 /* Mobail Apps Section css */
 
