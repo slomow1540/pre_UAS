@@ -1200,10 +1200,17 @@ a.navbar-brand.our_logo{
     padding: .375rem .75rem;
     width: 350px;
     height: 50px;
+    border: none;
+    border-radius: 3px;
+}
+
+.group-fill .request {
+    width: 1270px;
+    height: 125px;
 }
 
 .group-fill .accept {
-    color: #fff;
+    font-size: 25px;
 }
 /* Mobail Apps Section css */
 
