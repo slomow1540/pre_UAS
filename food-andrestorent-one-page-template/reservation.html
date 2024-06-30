@@ -119,8 +119,8 @@
                         <p>3. Review all reservation details before confirming to avoid errors or delays.</p>
                         <p>4. Please note that late cancellations or no-shows may incur charges. Review cancellation policies carefully.</p>
                         <p>5. Double-check your contact information to ensure you receive confirmation and updates about your reservation.</p>
+                        <div class="icon"></div>
                     </div>
-
                     <form action="#" autocomplete="off">
                         <div class="reservation-container">
                             <div class="ul-wrapper">
@@ -160,7 +160,7 @@
                                     <div class="group-fill">
                                         <label for="Time" class="label required">Time</label>
                                         <br>
-                                        <input class="fill-form" type="datetime" placeholder="Enter Your Time" required>
+                                        <input class="fill-form" type="datetime" placeholder="Enter the Time" required>
                                     </div>
                                 </ul>
                         
@@ -201,26 +201,28 @@
                                     <div class="group-fill">
                                         <label for="request" class="label required">Special Request</label>
                                         <br>
-                                        <textarea class=" fill-form request" placeholder="Please Specify your Request (If Any)" required></textarea>
+                                        <textarea class="fill-form request" placeholder="Please Specify your Request (If Any)" required></textarea>
                                     </div>
                                 </ul>
                             </div>
-                        
-                            <div class="group-fill">
-                                <input type="checkbox" class="accept" required><label for="accept" style="color: #fff;">&nbsp;I have read and agree with the term and conditons above</label>
-                            </div>
                             
                             <div class="termcondition">
+                                <h3>PLEASE READ THE RESERVATION TERM AND CONDITION</h3>
                                 <p>1. Reservations are subject to availability and will be confirmed via email or SMS.</p>
                                 <p>2. Arrive on time; tables are held for 15 minutes. Inform us if you will be late.</p>
                                 <p>3. Cancel at least 24 hours in advance to avoid fees.</p>
                                 <p>4. Special requests are subject to availability and cannot be guaranteed.</p>
                                 <p>5. Settle all charges before leaving.</p>
                                 <p>6. Inform us of any dietary requirements or allergies.</p>
-                                <p>7. We reserve the right to refuse service for inappropriate behavior.</p>
+                                <p style="padding-bottom: 20px;">7. We reserve the right to refuse service for inappropriate behavior.</p>
                             </div>
-                            <div class="group-fill">
-                                <button type="button">Reservation</button>
+
+                            <div class="buttonRes">
+                                <input type="checkbox" class="accept" required><label for="accept" style="color: #cc9a48; font-size: 20px;">&nbsp;I have read and agree with the term and conditons above</label>
+                            </div>
+
+                            <div class="buttonRes">
+                                <button class="btn-lg">Reservation</button>
                             </div>
                         </div>
                     </form>

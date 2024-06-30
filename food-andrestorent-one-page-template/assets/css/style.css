@@ -1177,9 +1177,16 @@ a.navbar-brand.our_logo{
 }
 
 .instruction p {
-    font-size: 20x;
+    font-size: 20px;
     color: #fff;
 }
+
+.icon {
+    background: #da9b31;
+    height: 3px;
+    flex: 1;
+}
+
 .reservation-container ul {
     display: flex;
     flex-wrap: wrap;
@@ -1193,7 +1200,8 @@ a.navbar-brand.our_logo{
 }
 
 .group-fill .label {
-    font-size: 16px;
+    font-size: 18px;
+    color: #fff;
 }
 
 .group-fill .fill-form {
@@ -1205,13 +1213,34 @@ a.navbar-brand.our_logo{
 }
 
 .group-fill .request {
-    width: 1270px;
+    width: 1125px;
     height: 125px;
 }
 
-.group-fill .accept {
-    font-size: 25px;
+.buttonRes{
+    display: flex;
+    justify-content: center;
 }
+.buttonRes input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.termcondition{
+    margin: 20px;
+    background-color: #000;
+}
+
+.termcondition h3 {
+    padding: 20px;
+    color: #da9b31;
+}
+
+.termcondition p{
+      padding-left: 20px;
+      color: #666;
+      font-size: 18px;
+} 
 /* Mobail Apps Section css */
 
 .mobailapps{
