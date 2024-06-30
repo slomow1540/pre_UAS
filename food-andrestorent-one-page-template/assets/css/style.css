@@ -1221,6 +1221,7 @@ a.navbar-brand.our_logo{
     display: flex;
     justify-content: center;
 }
+
 .buttonRes input[type="checkbox"] {
     width: 20px;
     height: 20px;
