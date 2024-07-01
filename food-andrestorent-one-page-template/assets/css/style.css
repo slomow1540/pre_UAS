@@ -1085,11 +1085,17 @@ a.navbar-brand.our_logo{
 	line-height:3rem;
 }
 
-.highlight{
+.recommend_item_one{
 	background:url(../images/spaghettiCarbonara.jpg) left center no-repeat;
 	padding:30px;
 	overflow:hidden;
 	margin-top:60px;
+}
+
+.recommend_text{
+	background:#fff;
+	padding:30px;
+	text-align:left;
 }
 
 .single_pakeg_two{
