@@ -4,12 +4,16 @@
 
 "use strict";
 //menu item [name,image source, price,category,curritem count(no change please)]
-const categories=["Drinks"]
-let menuitems=[
+const categories=["Drinks","Main Courses","Desserts"]
+const menuitems=[
 	["Berry Bliss Smoothie","https://i.pinimg.com/originals/a8/15/b1/a815b15a6ca5c5479a4626ca11290b7d.jpg",6.75,"Drinks",0],
-	["Tropical Sunset Cocktail","https://th.bing.com/th/id/OIP.t6Xu0vJnyF66fFrgNXiq_AAAAA?rs=1&pid=ImgDetMain",10.00,"Drinks",0]
+	["Tropical Sunset Cocktail","https://th.bing.com/th/id/OIP.t6Xu0vJnyF66fFrgNXiq_AAAAA?rs=1&pid=ImgDetMain",10.00,"Drinks",0],
+	["Matcha Madness Latte", "../images/matchaMadnessLatte.jpg", 5.75,"Drinks",0],
+	["Citrus Splash Refresher","../images/citrusSplashRefresher.jpg",6.00,"Drinks",0],
+	["Matcha Madness Latte", "../images/mintyMojitoMocktail.png", 9.00,"Drinks",0],
+	["Spaghetti Carbonara","../images/spaghettiCarbonara.jpg",6.75,"Main Courses",0],
+	["Beef Steak","beefSteak",18.00,"Main Courses",0]
 ]
-let currentidcount =0;
 listmaker(categories)
 ShowItems(categories,menuitems)
 function ShowItems(menuitem,items){
@@ -23,12 +27,11 @@ function ShowItems(menuitem,items){
 	return container;
 }
 
-
 function makeitem(listitems){
 	let li=document.createElement("li")
 	li.classList.add("tooltippopup")
-	let idmakerstuffig ="MenuItemID"+currentidcount;
-	li.setAttribute("id",idmakerstuffig)
+	
+	li.setAttribute("id",)
 	let name=document.createElement("p")
 	name.classList.add("col-md-4")
 	name.innerHTML=listitems[0]
@@ -40,17 +43,11 @@ function makeitem(listitems){
 	imageminus.classList.add("imagemenustyle")
 	imageminus.setAttribute("width","25px")
 	imageminus.setAttribute("height","25px")
-	let itemA="'"+listitems[0]+"'"
-	let itemB="'"+idmakerstuffig+"'"
-	let onclickcommandminus="additemtolist("+itemA+",-1,"+itemB+")"
-	imageminus.setAttribute("onclick",onclickcommandminus)
 	imageminus.setAttribute("src","assets/images/minus.png")
 	let imageplus=document.createElement("img")
 	imageplus.classList.add("imagemenustyle")
 	imageplus.setAttribute("width","25px")
 	imageplus.setAttribute("height","25px")
-	let onclickcommandplus="additemtolist("+itemA+",1,"+itemB+")"
-	imageplus.setAttribute("onclick",onclickcommandplus)
 	imageplus.setAttribute("src","assets/images/plus.png")
 	let itemcount=document.createElement("p")
 	itemcount.classList.add("itemcount")
@@ -87,7 +84,6 @@ function listmaker(category){
 		let tmpcontainer = ShowItems(categories[i],menuitems)
 		for (let i = 0; i < tmpcontainer.length; i++){
 			ul.appendChild(makeitem(tmpcontainer[i]))
-			currentidcount +=1;
 		}
 		findposition.appendChild(ul)
 	}
@@ -95,20 +91,9 @@ function listmaker(category){
 function additemtolist(item,int,dataid){
 	for (let i = 0; i < menuitems.length; i++){
 		if(menuitems[i][0]==item){
-			if(int==-1 && menuitems[i][4]==0){break}
-			if(int==-1){
-				menuitems[i][4] -= 1;
-				let elementitem=document.getElementById(dataid).children;
-				document.getElementById(dataid).children[3].innerHTML=menuitems[i][4]
-				document.getElementById(dataid).children[5].innerHTML=("$"+(menuitems[i][2]*menuitems[i][4]))
-			}
+			if(int==-1 && menuitems[i][4]==0){}
 			else{
 				menuitems[i][4] += 1;
-				let elementitem=document.getElementById(dataid).children;
-				document.getElementById(dataid).children[3].innerHTML=menuitems[i][4]
-				document.getElementById(dataid).children[5].innerHTML=("$"+(menuitems[i][2]*menuitems[i][4]))
-				
-				break
 			}
 		}
 	}
