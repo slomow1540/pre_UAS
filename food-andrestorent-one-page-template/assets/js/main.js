@@ -40,13 +40,17 @@ function makeitem(listitems){
 	imageminus.classList.add("imagemenustyle")
 	imageminus.setAttribute("width","25px")
 	imageminus.setAttribute("height","25px")
-	imageminus.setAttribute("onclick",additemtolist(listitems[0],-1,idmakerstuffig))
+	let itemA="'"+listitems[0]+"'"
+	let itemB="'"+idmakerstuffig+"'"
+	let onclickcommandminus="additemtolist("+itemA+",-1,"+itemB+")"
+	imageminus.setAttribute("onclick",onclickcommandminus)
 	imageminus.setAttribute("src","assets/images/minus.png")
 	let imageplus=document.createElement("img")
 	imageplus.classList.add("imagemenustyle")
 	imageplus.setAttribute("width","25px")
 	imageplus.setAttribute("height","25px")
-	imageplus.setAttribute("onclick",additemtolist(listitems[0],1,idmakerstuffig))
+	let onclickcommandplus="additemtolist("+itemA+",-1,"+itemB+")"
+	imageplus.setAttribute("onclick",onclickcommandplus)
 	imageplus.setAttribute("src","assets/images/plus.png")
 	let itemcount=document.createElement("p")
 	itemcount.classList.add("itemcount")
@@ -89,11 +93,16 @@ function listmaker(category){
 	}
 }
 function additemtolist(item,int,dataid){
+	console.log("gahfahs")
 	for (let i = 0; i < menuitems.length; i++){
 		if(menuitems[i][0]==item){
 			if(int==-1 && menuitems[i][4]==0){}
 			else{
 				menuitems[i][4] += 1;
+				let elementitem=document.getElementById(dataid).children;
+				document.getElementById(dataid).children[3].innerHTML=("$"+(menuitems[i][2]*menuitems[i][4]))
+				document.getElementById(dataid).children[5].innerHTML=menuitems[i][4]
+				break
 			}
 		}
 	}
