@@ -1037,6 +1037,14 @@ a.navbar-brand.our_logo{
 	padding-bottom: 50px;
 }
 
+.head_title h3{
+    padding: 20px;
+    font-family: 'Montserrat';
+}
+
+.head_title h4{
+    font-size: 50px;
+}
 .single_portfolio_text{
 	display:inline-block;
 	padding:0;
@@ -1077,8 +1085,30 @@ a.navbar-brand.our_logo{
 	line-height:3rem;
 }
 
+.highlight{
+	background:url(../images/newsone.jpg) left center no-repeat;
+	padding:30px;
+	overflow:hidden;
+	margin-top:60px;
+}
 
-/*Amazing Deliceas Section css */
+.single_pakeg_two{
+	background:url(../images/newstwo.jpg) right center no-repeat;
+	padding:30px;	
+	overflow:hidden;
+	margin-top:60px;	
+	
+}
+
+.single_pakeg_three{
+	background:url(../images/newsthree.jpg) left center no-repeat;
+	padding:30px;	
+	overflow:hidden;
+	margin-top:60px;	
+	
+}
+
+/*Menu Section css */
 .ourPakeg .main_pakeg_content .head_title h3{
 	color:#fff;
 	
@@ -1219,6 +1249,7 @@ a.navbar-brand.our_logo{
       color: #666;
       font-size: 18px;
 } 
+
 /* Mobail Apps Section css */
 
 .mobailapps{
@@ -1263,11 +1294,13 @@ a.navbar-brand.our_logo{
 .single_monail_apps_text{
     margin-left:-10px;
 }
+
 .single_monail_apps_text a{
 	margin-top:50px;
 	margin-left:10px;
 	display:inline-block;
 }
+
 .single_monail_apps_text a img{
 	max-width:90%;
 }

@@ -144,10 +144,10 @@ jQuery(document).ready(function ($) {
 		displayPage(".EventGroup",currPage)
 		currPage = ".EventGroup";
 	});
-	const RecommendationButton = document.querySelector('.TopBarRecommendation');
-	RecommendationButton.addEventListener('click', function() {
-		displayPage(".RecommendationGroup",currPage)
-		currPage = ".RecommendationGroup";
+	const HighlightButton = document.querySelector('.TopBarHighlight');
+	HighlightButton.addEventListener('click', function() {
+		displayPage(".HighlightGroup",currPage)
+		currPage = ".HighlightGroup";
 	});
 
 	function displayPage(gotopage,currentpage){
