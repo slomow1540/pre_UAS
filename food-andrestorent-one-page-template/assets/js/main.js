@@ -5,10 +5,11 @@
 "use strict";
 //menu item [name,image source, price,category,curritem count(no change please)]
 const categories=["Drinks"]
-const menuitems=[
+let menuitems=[
 	["Berry Bliss Smoothie","https://i.pinimg.com/originals/a8/15/b1/a815b15a6ca5c5479a4626ca11290b7d.jpg",6.75,"Drinks",0],
 	["Tropical Sunset Cocktail","https://th.bing.com/th/id/OIP.t6Xu0vJnyF66fFrgNXiq_AAAAA?rs=1&pid=ImgDetMain",10.00,"Drinks",0]
 ]
+let currentidcount =0;
 listmaker(categories)
 ShowItems(categories,menuitems)
 function ShowItems(menuitem,items){
@@ -22,11 +23,12 @@ function ShowItems(menuitem,items){
 	return container;
 }
 
+
 function makeitem(listitems){
 	let li=document.createElement("li")
 	li.classList.add("tooltippopup")
-	
-	li.setAttribute("id",)
+	let idmakerstuffig ="MenuItemID"+currentidcount;
+	li.setAttribute("id",idmakerstuffig)
 	let name=document.createElement("p")
 	name.classList.add("col-md-4")
 	name.innerHTML=listitems[0]
@@ -38,11 +40,13 @@ function makeitem(listitems){
 	imageminus.classList.add("imagemenustyle")
 	imageminus.setAttribute("width","25px")
 	imageminus.setAttribute("height","25px")
+	imageminus.setAttribute("onclick",additemtolist(listitems[0],-1,idmakerstuffig))
 	imageminus.setAttribute("src","assets/images/minus.png")
 	let imageplus=document.createElement("img")
 	imageplus.classList.add("imagemenustyle")
 	imageplus.setAttribute("width","25px")
 	imageplus.setAttribute("height","25px")
+	imageplus.setAttribute("onclick",additemtolist(listitems[0],1,idmakerstuffig))
 	imageplus.setAttribute("src","assets/images/plus.png")
 	let itemcount=document.createElement("p")
 	itemcount.classList.add("itemcount")
@@ -79,6 +83,7 @@ function listmaker(category){
 		let tmpcontainer = ShowItems(categories[i],menuitems)
 		for (let i = 0; i < tmpcontainer.length; i++){
 			ul.appendChild(makeitem(tmpcontainer[i]))
+			currentidcount +=1;
 		}
 		findposition.appendChild(ul)
 	}
