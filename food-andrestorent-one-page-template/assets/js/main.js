@@ -25,6 +25,8 @@ function ShowItems(menuitem,items){
 function makeitem(listitems){
 	let li=document.createElement("li")
 	li.classList.add("tooltippopup")
+	
+	li.setAttribute("id",)
 	let name=document.createElement("p")
 	name.classList.add("col-md-4")
 	name.innerHTML=listitems[0]
@@ -81,7 +83,16 @@ function listmaker(category){
 		findposition.appendChild(ul)
 	}
 }
-
+function additemtolist(item,int,dataid){
+	for (let i = 0; i < menuitems.length; i++){
+		if(menuitems[i][0]==item){
+			if(int==-1 && menuitems[i][4]==0){}
+			else{
+				menuitems[i][4] += 1;
+			}
+		}
+	}
+}
 
 
 jQuery(document).ready(function ($) {
