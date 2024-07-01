@@ -49,7 +49,7 @@ function makeitem(listitems){
 	imageplus.classList.add("imagemenustyle")
 	imageplus.setAttribute("width","25px")
 	imageplus.setAttribute("height","25px")
-	let onclickcommandplus="additemtolist("+itemA+",-1,"+itemB+")"
+	let onclickcommandplus="additemtolist("+itemA+",1,"+itemB+")"
 	imageplus.setAttribute("onclick",onclickcommandplus)
 	imageplus.setAttribute("src","assets/images/plus.png")
 	let itemcount=document.createElement("p")
@@ -93,15 +93,21 @@ function listmaker(category){
 	}
 }
 function additemtolist(item,int,dataid){
-	console.log("gahfahs")
 	for (let i = 0; i < menuitems.length; i++){
 		if(menuitems[i][0]==item){
-			if(int==-1 && menuitems[i][4]==0){}
+			if(int==-1 && menuitems[i][4]==0){break}
+			if(int==-1){
+				menuitems[i][4] -= 1;
+				let elementitem=document.getElementById(dataid).children;
+				document.getElementById(dataid).children[3].innerHTML=menuitems[i][4]
+				document.getElementById(dataid).children[5].innerHTML=("$"+(menuitems[i][2]*menuitems[i][4]))
+			}
 			else{
 				menuitems[i][4] += 1;
 				let elementitem=document.getElementById(dataid).children;
-				document.getElementById(dataid).children[3].innerHTML=("$"+(menuitems[i][2]*menuitems[i][4]))
-				document.getElementById(dataid).children[5].innerHTML=menuitems[i][4]
+				document.getElementById(dataid).children[3].innerHTML=menuitems[i][4]
+				document.getElementById(dataid).children[5].innerHTML=("$"+(menuitems[i][2]*menuitems[i][4]))
+				
 				break
 			}
 		}
