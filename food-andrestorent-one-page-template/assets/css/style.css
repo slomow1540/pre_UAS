@@ -1085,17 +1085,23 @@ a.navbar-brand.our_logo{
 	line-height:3rem;
 }
 
-.recommend_item_one{
-	background:url(../images/spaghettiCarbonara.jpg) left center no-repeat;
-	padding:30px;
-	overflow:hidden;
-	margin-top:60px;
+
+.recommend_item_one {
+    background: url('../images/spaghettiCarbonara.jpg') left center no-repeat;
+    padding: 30px;
+    overflow: hidden;
+    margin-top: 60px;
 }
 
 .recommend_text{
 	background:#fff;
 	padding:30px;
 	text-align:left;
+}
+.recommend_text ul li{
+    background: url(../images/pkli.png) no-repeat left center;
+    padding: 15px 0px 15px 60px;
+    margin-top: 20px;
 }
 
 .single_pakeg_two{
@@ -1136,7 +1142,7 @@ a.navbar-brand.our_logo{
   padding-bottom:120px;
 }
 
-.single_pakeg_text{
+.recomended_text{
 	background:#fff;
 	padding:30px;
 	text-align:left;

@@ -6,14 +6,23 @@
 //menu item [name,image source, price,category,curritem count(no change please)]
 const categories=["Drinks","Main Courses","Desserts"]
 const menuitems=[
-	["Berry Bliss Smoothie","https://i.pinimg.com/originals/a8/15/b1/a815b15a6ca5c5479a4626ca11290b7d.jpg",6.75,"Drinks",0],
-	["Tropical Sunset Cocktail","https://th.bing.com/th/id/OIP.t6Xu0vJnyF66fFrgNXiq_AAAAA?rs=1&pid=ImgDetMain",10.00,"Drinks",0],
-	["Matcha Madness Latte", "../images/matchaMadnessLatte.jpg", 5.75,"Drinks",0],
-	["Citrus Splash Refresher","../images/citrusSplashRefresher.jpg",6.00,"Drinks",0],
-	["Matcha Madness Latte", "../images/mintyMojitoMocktail.png", 9.00,"Drinks",0],
-	["Spaghetti Carbonara","../images/spaghettiCarbonara.jpg",6.75,"Main Courses",0],
-	["Beef Steak","beefSteak",18.00,"Main Courses",0]
+	["BerryBlissSmoothie","berry",6.75,"Drinks",0],
+	["TropicalSunsetCocktail","tropicalSunset",10.00,"Drinks",0],
+	["MatchaMadnessLatte","matchaMadnessLatte",5.75,"Drinks",0],
+	["CitrusSplashRefresher","citrusSplashRefresher",6.00,"Drinks",0],
+	["MatchaMadnessLatte","mintyMojito",9.00,"Drinks",0],
+	["SpaghettiCarbonara","spaghettiCarbonara",6.75,"MainCourses",0],
+	["GrilledChickenBreast","grilledChickenBreast",14.00,"MainCourses",0],
+	["BeefSteak","beefSteak",18.00,"MainCourses",0],
+	["Pan-SearedSalmon","grilledChickenBreast",16.50,"MainCourses",0],
+	["VegetableStir-Fry","vegetableStirFry",11.00,"MainCourses",0],
+	["ChocolateLavaCake","lavacake",6.50,"Desserts",0],
+	["Tiramisu","tiramisu",5.00,"Desserts",0],
+	["Cheesecake","cheesecake",5.50,"Desserts",0],
+	["Apple Pie","applepie",4.50,"Desserts",0],
+	["Creme Brulee","creambrulee",6.00,"Desserts",0]
 ]
+
 listmaker(categories)
 ShowItems(categories,menuitems)
 function ShowItems(menuitem,items){
@@ -74,7 +83,7 @@ function makeitem(listitems){
 function listmaker(category){
 	for (let i = 0; i < category.length; i++){
 		let parts=document.createElement("div")
-		parts.classList.add("pakeg_title")
+		parts.classList.add("recomended_title")
 		let parttitle=document.createElement("h4")
 		parttitle.innerHTML=categories[i]
 		parts.appendChild(parttitle)
@@ -88,16 +97,18 @@ function listmaker(category){
 		findposition.appendChild(ul)
 	}
 }
-function additemtolist(item,int,dataid){
-	for (let i = 0; i < menuitems.length; i++){
-		if(menuitems[i][0]==item){
-			if(int==-1 && menuitems[i][4]==0){}
-			else{
-				menuitems[i][4] += 1;
-			}
-		}
-	}
+
+function addItemToList(item, int, dataid) {
+    for (let i = 0; i < menuitems.length; i++) {
+        if (menuitems[i][0] == item) {
+			menuitems[i][1] = `../images/${dataid}.jpg`;
+            if (int == -1 && menuitems[i][4] == 0) {
+                menuitems[i][4] += int;
+            }
+        }
+    }
 }
+
 
 
 jQuery(document).ready(function ($) {
