@@ -3,9 +3,83 @@
  */
 
 "use strict";
+//menu item [name,image source, price,category,curritem count(no change please)]
+const categories=["Drinks"]
+const menuitems=[
+	["Berry Bliss Smoothie","https://i.pinimg.com/originals/a8/15/b1/a815b15a6ca5c5479a4626ca11290b7d.jpg",6.75,"Drinks",0],
+	["Tropical Sunset Cocktail","https://th.bing.com/th/id/OIP.t6Xu0vJnyF66fFrgNXiq_AAAAA?rs=1&pid=ImgDetMain",10.00,"Drinks",0]
+]
+listmaker(categories)
+ShowItems(categories,menuitems)
+function ShowItems(menuitem,items){
+	let length = items.length;
+	const container =[];
+	for (let i = 0; i < length; i++) {
+		if(items[i][3]==menuitem){
+			container.push(items[i])
+		}
+	  }
+	return container;
+}
 
-function grr(){
-	console.log("grr")
+function makeitem(listitems){
+	let li=document.createElement("li")
+	li.classList.add("tooltippopup")
+	let name=document.createElement("p")
+	name.classList.add("col-md-4")
+	name.innerHTML=listitems[0]
+	let price=document.createElement("p")
+	let priceadder="$"+listitems[2]
+	price.classList.add("col-md-1")
+	price.innerHTML=priceadder;
+	let imageminus=document.createElement("img")
+	imageminus.classList.add("imagemenustyle")
+	imageminus.setAttribute("width","25px")
+	imageminus.setAttribute("height","25px")
+	imageminus.setAttribute("src","assets/images/minus.png")
+	let imageplus=document.createElement("img")
+	imageplus.classList.add("imagemenustyle")
+	imageplus.setAttribute("width","25px")
+	imageplus.setAttribute("height","25px")
+	imageplus.setAttribute("src","assets/images/plus.png")
+	let itemcount=document.createElement("p")
+	itemcount.classList.add("itemcount")
+	itemcount.innerHTML=listitems[4]
+	let itemtotal=document.createElement("p")
+	itemtotal.classList.add("itemtotal","col-md-1")
+	let totaladder="$"+0;
+	itemtotal.innerHTML=totaladder;
+	let span=document.createElement("span")
+	span.classList.add("tooltippopuptext")
+	let spanimage=document.createElement("img")
+	spanimage.setAttribute("src",listitems[1])
+	li.appendChild(name)
+	li.appendChild(price)
+	li.appendChild(imageminus)
+	li.appendChild(itemcount)
+	li.appendChild(imageplus)
+	span.appendChild(spanimage)
+	li.appendChild(itemtotal)
+	li.appendChild(span)
+	return li
+}
+
+function listmaker(category){
+	for (let i = 0; i < category.length; i++){
+		let parts=document.createElement("div")
+		parts.classList.add("pakeg_title")
+		let parttitle=document.createElement("h4")
+		parttitle.innerHTML=categories[i]
+		parts.appendChild(parttitle)
+		let findposition=document.getElementById("MenuContainerGroups")
+		findposition.appendChild(parts)
+		let ul=document.createElement("ul")
+		let tmpcontainer = ShowItems(categories[i],menuitems)
+		for (let i = 0; i < tmpcontainer.length; i++){
+			ul.appendChild(makeitem(tmpcontainer[i]))
+		}
+		findposition.appendChild(ul)
+	}
 }
 
 
