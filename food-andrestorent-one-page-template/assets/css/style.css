@@ -1092,6 +1092,10 @@ a.navbar-brand.our_logo{
     padding: 0;
 }
 
+.recomended_one{
+    background-color: white;
+}
+
 .recommend_image {
     background: url('../images/spaghettiCarbonara.jpg') center center no-repeat;
     background-size: cover;
@@ -1156,7 +1160,7 @@ a.navbar-brand.our_logo{
 }
 
 /* Reservation Section */
-.reservation{
+.reservationGroup{
     background:url(../images/reservation.png) no-repeat center top scroll;
   -moz-background-size: cover;
   -webkit-background-size: cover;

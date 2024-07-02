@@ -6,17 +6,17 @@
 //menu item [name,image source, price,category,curritem count(no change please)]
 const categories=["Drinks","Main Courses","Desserts"]
 const menuitems=[
-	["BerryBlissSmoothie","berry",6.75,"Drinks",0],
-	["TropicalSunsetCocktail","tropicalSunset",10.00,"Drinks",0],
-	["MatchaMadnessLatte","matchaMadnessLatte",5.75,"Drinks",0],
-	["CitrusSplashRefresher","citrusSplashRefresher",6.00,"Drinks",0],
-	["MatchaMadnessLatte","mintyMojito",9.00,"Drinks",0],
-	["SpaghettiCarbonara","spaghettiCarbonara",6.75,"Main Courses",0],
-	["GrilledChickenBreast","grilledChickenBreast",14.00,"Main Courses",0],
-	["BeefSteak","beefSteak",18.00,"Main Courses",0],
-	["Pan-SearedSalmon","grilledChickenBreast",16.50,"Main Courses",0],
-	["VegetableStir-Fry","vegetableStirFry",11.00,"Main Courses",0],
-	["ChocolateLavaCake","lavacake",6.50,"Desserts",0],
+	["Berry Bliss Smoothie","berry",6.75,"Drinks",0],
+	["Tropical Sunset Cocktail","tropicalSunset",10.00,"Drinks",0],
+	["Matcha Madness Latte","matchaMadnessLatte",5.75,"Drinks",0],
+	["Citrus Splash Refresher","citrusSplashRefresher",6.00,"Drinks",0],
+	["Matcha Madness Latte","mintyMojito",9.00,"Drinks",0],
+	["Spaghetti Carbonara","spaghettiCarbonara",6.75,"Main Courses",0],
+	["Grilled Chicken Breast","grilledChickenBreast",14.00,"Main Courses",0],
+	["Beef Steak","beefSteak",18.00,"Main Courses",0],
+	["Pan-Seared Salmon","grilledChickenBreast",16.50,"Main Courses",0],
+	["Vegetable Stir-Fry","vegetableStirFry",11.00,"Main Courses",0],
+	["Chocolate Lava Cake","lavacake",6.50,"Desserts",0],
 	["Tiramisu","tiramisu",5.00,"Desserts",0],
 	["Cheesecake","cheesecake",5.50,"Desserts",0],
 	["Apple Pie","applepie",4.50,"Desserts",0],
@@ -178,6 +178,7 @@ jQuery(document).ready(function ($) {
 
 	const clickheretopayup = document.querySelector('.clickheretopayup');
 	clickheretopayup.addEventListener('click', function() {
+		let totalcheckout=0;
 		document.getElementById("menucheckout").classList.remove("inactiveA")
 		document.getElementById("menucheckout").classList.add("activeA")
 		document.getElementById("menualllist").classList.remove("activeA")
@@ -186,9 +187,43 @@ jQuery(document).ready(function ($) {
 		document.getElementById("clickheretopayup").classList.add("inactiveA")
 		for (let i = 0; i < menuitems.length; i++) {
 			if(menuitems[i][4]!=0){
-				console.log(menuitems[i][4])
+				let wahtevernameguh=document.createElement("ul")
+				wahtevernameguh.setAttribute("id","Checkout-item")
+				let itemnamecheckout = document.createElement("li");
+				itemnamecheckout.classList.add("col-sm-10","text-left")
+				let addstufffornamecheckout=menuitems[i][0]+" x"+menuitems[i][4]
+				let itemnamecheckoutA=document.createElement("p");
+				itemnamecheckoutA.innerHTML=addstufffornamecheckout;
+				itemnamecheckout.appendChild(itemnamecheckoutA)
+				let itemPricecheckout = document.createElement("li");
+				itemPricecheckout.classList.add("col-sm-2","text-right")
+				let addstuffforpricecheckout="$"+(menuitems[i][2]*menuitems[i][4])
+				totalcheckout+=(menuitems[i][2]*menuitems[i][4])
+				let itemPricecheckouttxt=document.createElement("p");
+				itemPricecheckouttxt.innerHTML=addstuffforpricecheckout;
+				itemPricecheckout.appendChild(itemPricecheckouttxt)
+				wahtevernameguh.appendChild(itemnamecheckout)
+				wahtevernameguh.appendChild(itemPricecheckout)
+
+				document.getElementById("CheckOutItems").appendChild(wahtevernameguh)
+
 			}
 		  }
+		  let wahtevernameguh=document.createElement("ul")
+			wahtevernameguh.setAttribute("id","Checkout-item")
+			let itemnamecheckout = document.createElement("li");
+			itemnamecheckout.classList.add("col-sm-10","text-left")
+			let itemnamecheckoutA=document.createElement("p");
+			itemnamecheckoutA.innerHTML="Total Price";
+			itemnamecheckout.appendChild(itemnamecheckoutA)
+			let itemPricecheckout = document.createElement("li");
+			itemPricecheckout.classList.add("col-sm-2","text-right")
+			let itemPricecheckouttxt=document.createElement("p");
+			itemPricecheckouttxt.innerHTML=("$"+totalcheckout);
+			itemPricecheckout.appendChild(itemPricecheckouttxt)
+			wahtevernameguh.appendChild(itemnamecheckout)
+			wahtevernameguh.appendChild(itemPricecheckout)
+			document.getElementById("CheckOutItems").appendChild(wahtevernameguh)
 	});
 	function a(targetlist){
 		
