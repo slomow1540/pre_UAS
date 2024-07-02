@@ -1506,6 +1506,22 @@ a.navbar-brand.our_logo{
   #menucheckout{
     background-color: whitesmoke;
     border: 3px gray solid;
+    width: 500px;
+    margin-left: 28%;
+    margin-right: 50%;
+  }
+  #menucheckout ul{
+    margin: 10px;
+  }
+
+  #Checkout-item{
+    display: flex;
+    flex-direction: row;
+    width: 440px;
+  }
+  #Checkout-item p{
+    font-size: larger;
+    color: #000;
   }
 
   .clickheretopayup{

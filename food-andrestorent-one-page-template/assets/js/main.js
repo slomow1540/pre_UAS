@@ -182,6 +182,8 @@ jQuery(document).ready(function ($) {
 		document.getElementById("menucheckout").classList.add("activeA")
 		document.getElementById("menualllist").classList.remove("activeA")
 		document.getElementById("menualllist").classList.add("inactiveA")
+		document.getElementById("clickheretopayup").classList.remove("activeA")
+		document.getElementById("clickheretopayup").classList.add("inactiveA")
 		for (let i = 0; i < menuitems.length; i++) {
 			if(menuitems[i][4]!=0){
 				console.log(menuitems[i][4])
