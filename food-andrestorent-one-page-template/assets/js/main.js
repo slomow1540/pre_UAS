@@ -11,20 +11,27 @@ const menuitems=[
 	["MatchaMadnessLatte","matchaMadnessLatte",5.75,"Drinks",0],
 	["CitrusSplashRefresher","citrusSplashRefresher",6.00,"Drinks",0],
 	["MatchaMadnessLatte","mintyMojito",9.00,"Drinks",0],
-	["SpaghettiCarbonara","spaghettiCarbonara",6.75,"MainCourses",0],
-	["GrilledChickenBreast","grilledChickenBreast",14.00,"MainCourses",0],
-	["BeefSteak","beefSteak",18.00,"MainCourses",0],
-	["Pan-SearedSalmon","grilledChickenBreast",16.50,"MainCourses",0],
-	["VegetableStir-Fry","vegetableStirFry",11.00,"MainCourses",0],
+	["SpaghettiCarbonara","spaghettiCarbonara",6.75,"Main Courses",0],
+	["GrilledChickenBreast","grilledChickenBreast",14.00,"Main Courses",0],
+	["BeefSteak","beefSteak",18.00,"Main Courses",0],
+	["Pan-SearedSalmon","grilledChickenBreast",16.50,"Main Courses",0],
+	["VegetableStir-Fry","vegetableStirFry",11.00,"Main Courses",0],
 	["ChocolateLavaCake","lavacake",6.50,"Desserts",0],
 	["Tiramisu","tiramisu",5.00,"Desserts",0],
 	["Cheesecake","cheesecake",5.50,"Desserts",0],
 	["Apple Pie","applepie",4.50,"Desserts",0],
-	["Creme Brulee","creambrulee",6.00,"Desserts",0]
+	["Creme Brulee","cremebrulee",6.00,"Desserts",0]
 ]
-
+//starter code
+let currentidcount =0;
+for (let i = 0; i < menuitems.length; i++) {
+	menuitems[i][1] = `assets/images/${menuitems[i][1]}.jpg`;
+}
 listmaker(categories)
 ShowItems(categories,menuitems)
+//end of starter code
+
+
 function ShowItems(menuitem,items){
 	let length = items.length;
 	const container =[];
@@ -39,8 +46,8 @@ function ShowItems(menuitem,items){
 function makeitem(listitems){
 	let li=document.createElement("li")
 	li.classList.add("tooltippopup")
-	
-	li.setAttribute("id",)
+	let idmakerstuffig ="MenuItemID"+currentidcount;
+	li.setAttribute("id",idmakerstuffig)
 	let name=document.createElement("p")
 	name.classList.add("col-md-4")
 	name.innerHTML=listitems[0]
@@ -49,6 +56,10 @@ function makeitem(listitems){
 	price.classList.add("col-md-1")
 	price.innerHTML=priceadder;
 	let imageminus=document.createElement("img")
+	let itemA="'"+listitems[0]+"'"
+	let itemB="'"+idmakerstuffig+"'"
+	let onclickcommandminus="additemtolist("+itemA+",-1,"+itemB+")"
+	imageminus.setAttribute("onclick",onclickcommandminus)
 	imageminus.classList.add("imagemenustyle")
 	imageminus.setAttribute("width","25px")
 	imageminus.setAttribute("height","25px")
@@ -58,6 +69,8 @@ function makeitem(listitems){
 	imageplus.setAttribute("width","25px")
 	imageplus.setAttribute("height","25px")
 	imageplus.setAttribute("src","assets/images/plus.png")
+	let onclickcommandplus="additemtolist("+itemA+",1,"+itemB+")"
+	imageplus.setAttribute("onclick",onclickcommandplus)
 	let itemcount=document.createElement("p")
 	itemcount.classList.add("itemcount")
 	itemcount.innerHTML=listitems[4]
@@ -93,18 +106,30 @@ function listmaker(category){
 		let tmpcontainer = ShowItems(categories[i],menuitems)
 		for (let i = 0; i < tmpcontainer.length; i++){
 			ul.appendChild(makeitem(tmpcontainer[i]))
+			currentidcount +=1;
 		}
 		findposition.appendChild(ul)
 	}
 }
 
-function addItemToList(item, int, dataid) {
+function additemtolist(item,int,dataid){
     for (let i = 0; i < menuitems.length; i++) {
         if (menuitems[i][0] == item) {
-			menuitems[i][1] = `../images/${dataid}.jpg`;
-            if (int == -1 && menuitems[i][4] == 0) {
-                menuitems[i][4] += int;
-            }
+			if(int==-1 && menuitems[i][4]==0){break}
+			if(int==-1){
+				menuitems[i][4] -= 1;
+				let elementitem=document.getElementById(dataid).children;
+				document.getElementById(dataid).children[3].innerHTML=menuitems[i][4]
+				document.getElementById(dataid).children[5].innerHTML=("$"+(menuitems[i][2]*menuitems[i][4]))
+			}
+			else{
+				menuitems[i][4] += 1;
+				let elementitem=document.getElementById(dataid).children;
+				document.getElementById(dataid).children[3].innerHTML=menuitems[i][4]
+				document.getElementById(dataid).children[5].innerHTML=("$"+(menuitems[i][2]*menuitems[i][4]))
+				
+				break
+			}
         }
     }
 }
@@ -151,6 +176,21 @@ jQuery(document).ready(function ($) {
 		displaySlides(currindex += 1)
 	});
 
+	const clickheretopayup = document.querySelector('.clickheretopayup');
+	clickheretopayup.addEventListener('click', function() {
+		document.getElementById("menucheckout").classList.remove("inactiveA")
+		document.getElementById("menucheckout").classList.add("activeA")
+		document.getElementById("menualllist").classList.remove("activeA")
+		document.getElementById("menualllist").classList.add("inactiveA")
+		for (let i = 0; i < menuitems.length; i++) {
+			if(menuitems[i][4]!=0){
+				console.log(menuitems[i][4])
+			}
+		  }
+	});
+	function a(targetlist){
+		
+	}
 
 	// stuff for the swithing page
 

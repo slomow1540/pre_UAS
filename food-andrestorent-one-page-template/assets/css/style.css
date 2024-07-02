@@ -671,9 +671,6 @@ a.navbar-brand.our_logo{
 	background:url(../images/bannerbg.jpg) center center no-repeat;
 	background-size:cover;
 }
-.main_slider {
-	
-}
 
 .main_slider .main_slider_content h1{
     font-size: 6rem;
@@ -1499,3 +1496,38 @@ a.navbar-brand.our_logo{
     margin-left: 5px; 
     margin-right: 5px;
   }
+
+  .centre{
+    align-items: center;
+    display: flex;
+    margin: 50px;
+  }
+
+  #menucheckout{
+    background-color: whitesmoke;
+    border: 3px gray solid;
+  }
+
+  .clickheretopayup{
+    background-color: white;
+  }
+
+button.clickheretopayup{
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    width: 300px;
+    border: 1px solid #fff;
+    text-transform: none;
+    transition: .6s;
+    margin-top: 30px;
+    color: #fff;
+	display:inline-block;
+	background:white;
+	line-height: 1.5em;
+}
+
+button.clickheretopayup:hover{
+	background:#d6962c;
+	color:#fff;
+}
