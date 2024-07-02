@@ -1117,7 +1117,7 @@ a.navbar-brand.our_logo{
     margin-top: 20px;
 }
 
-.single_pakeg_two{
+.recommend_two{
 	background:url(../images/newstwo.jpg) right center no-repeat;
 	padding:30px;	
 	overflow:hidden;
@@ -1125,7 +1125,7 @@ a.navbar-brand.our_logo{
 	
 }
 
-.single_pakeg_three{
+.recommend_three{
 	background:url(../images/newsthree.jpg) left center no-repeat;
 	padding:30px;	
 	overflow:hidden;
@@ -1153,12 +1153,6 @@ a.navbar-brand.our_logo{
   width: 100%;
   overflow: hidden;	
   padding-bottom:120px;
-}
-
-.recomended_text{
-	background:#fff;
-	padding:30px;
-	text-align:left;
 }
 
 /* Reservation Section */
