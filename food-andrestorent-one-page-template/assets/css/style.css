@@ -1000,6 +1000,7 @@ a.navbar-brand.our_logo{
 	padding:120px 0px;
 	display:inline-block;
 }
+
 .main_features_content{
 	background:url(../images/ft.png) right center no-repeat;
 	padding:40px;
@@ -1108,6 +1109,7 @@ a.navbar-brand.our_logo{
     position: absolute;
 	transition:.6s;
 }
+
 .portfolio_images_overlay h6{
 	text-transform:uppercase;
 	color:#fff;
@@ -1122,6 +1124,10 @@ a.navbar-brand.our_logo{
 }
 
 .month-image {
+    display: flex;
+
+    width: 250px;
+    height: 250px;
     margin: 10px;
     display: none;
 }
