@@ -194,6 +194,8 @@ jQuery(document).ready(function ($) {
 		document.getElementById("menualllist").classList.add("inactiveA")
 		document.getElementById("clickheretopayup").classList.remove("activeA")
 		document.getElementById("clickheretopayup").classList.add("inactiveA")
+		document.getElementById("searchbarstuff").classList.remove("activeA")
+		document.getElementById("searchbarstuff").classList.add("inactiveA")
 		for (let i = 0; i < menuitems.length; i++) {
 			if(menuitems[i][4]!=0){
 				let wahtevernameguh=document.createElement("ul")
