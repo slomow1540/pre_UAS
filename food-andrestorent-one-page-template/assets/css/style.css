@@ -667,9 +667,14 @@ a.navbar-brand.our_logo{
 
 /* slider section */
 
-.slider{
+.slider_main{
 	background:url(../images/bannerbg.jpg) center center no-repeat;
-	background-size:cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	overflow: hidden;
 }
 
 .main_slider .main_slider_content h1{
@@ -1213,10 +1218,9 @@ a.navbar-brand.our_logo{
 }
 
 /*Menu Section css */
-.ourPakeg .main_pakeg_content {
-	background: url('../images/textbg.jpg');
+#menualllist{
+    background-color: white;
 }
-
 .ourPakeg .main_pakeg_content .head_title h3{
 	color:#fff;
 	

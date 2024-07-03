@@ -256,6 +256,12 @@ jQuery(document).ready(function ($) {
 		currPage = ".HighlightGroup";
 	});
 
+	const reservationButton = document.querySelector('.TopBarreservation');
+	reservationButton.addEventListener('click', function() {
+		displayPage(".reservationGroup",currPage)
+		currPage = ".reservationGroup";
+	});
+
 	function displayPage(gotopage,currentpage){
 		if (gotopage == currentpage){}
 		else{
