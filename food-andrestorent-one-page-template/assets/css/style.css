@@ -1257,9 +1257,6 @@ a.navbar-brand.our_logo{
     height: 25px;
 }
 
-.col .buttonsortAZ{
-    margin-left: 20px;
-}
 /* Reservation Section */
 .reservationGroup{
     background:url(../images/reservation.png) no-repeat center top scroll;
