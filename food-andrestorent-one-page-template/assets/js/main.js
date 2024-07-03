@@ -86,7 +86,22 @@ function makeitem(listitems){
 	let spanimage=document.createElement("img")
 	spanimage.setAttribute("src",listitems[1])
 	let searchspan=document.createElement("span")
-	searchspan.classList.add("listforsearch","inactive")
+	searchspan.classList.add("listforsearch","inactive","col-md-2")
+
+	let buttonstuff=document.createElement("button")
+	buttonstuff.classList.add("like_button","col-md-1")
+	let spanbuttonA=document.createElement("span")
+	spanbuttonA.classList.add("icon")
+	let ibuttonA=document.createElement("i")
+	ibuttonA.classList.add("far","fa-thumbs-up")
+	spanbuttonA.appendChild(ibuttonA)
+	let spanbuttonB=document.createElement("span")
+	spanbuttonB.classList.add("likecounter")
+	spanbuttonB.innerHTML="0";
+	buttonstuff.innerHTML="like "
+	buttonstuff.appendChild(spanbuttonA)
+	buttonstuff.appendChild(spanbuttonB)
+	
 	searchspan.innerHTML=(listitems[0]+" "+listitems[3])
 	li.appendChild(name)
 	li.appendChild(price)
@@ -97,6 +112,7 @@ function makeitem(listitems){
 	li.appendChild(itemtotal)
 	li.appendChild(span)
 	li.appendChild(searchspan)
+	li.appendChild(buttonstuff)
 	return li
 }
 
@@ -236,9 +252,23 @@ jQuery(document).ready(function ($) {
 			wahtevernameguh.appendChild(itemPricecheckout)
 			document.getElementById("CheckOutItems").appendChild(wahtevernameguh)
 	});
-	function a(targetlist){
-		
-	}
+	const likeBtn = document.querySelectorAll(".like_button");
+	let clicked = false;
+	likeBtn.forEach(function (item) {
+		item.addEventListener("click", (event) => {
+			let likeIcon = item.querySelector(".icon");
+			let count = item.querySelector(".likecounter");
+			if (+count.textContent == 0) {
+				clicked = true;
+				likeIcon.innerHTML = `<i class="fas fa-thumbs-up"></i>`;
+				count.textContent++;
+			} else {
+				clicked = false;
+				likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
+				count.textContent--;
+			}
+		});
+	})
 
 	// stuff for the swithing page
 

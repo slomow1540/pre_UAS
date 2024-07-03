@@ -1639,3 +1639,7 @@ button.clickheretopayup:hover{
     margin-left: auto;
     margin-right: auto;
 }
+
+.like_button span{
+    background-color: transparent;
+}
