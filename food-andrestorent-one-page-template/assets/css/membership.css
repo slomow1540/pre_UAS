@@ -1,0 +1,80 @@
+.membership{
+	background:url(../images/portfoliobg.jpg) center center no-repeat;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	overflow: hidden;	
+}
+
+.form-container,
+.dashboard-container{
+    margin: 150px 0;
+    color: #000;
+}
+
+.form-container h2  ,
+.dashboard-container h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+}
+
+.form-container #register-form {
+    color: #000;
+}
+.form-container, .dashboard-container {
+    display: none;
+}
+
+.form-container.active, .dashboard-container.active {
+    display: block;
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
