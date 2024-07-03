@@ -47,7 +47,8 @@ function ShowItems(menuitem,items){
 
 function makeitem(listitems){
 	let li=document.createElement("li")
-	li.classList.add("tooltippopup")
+	li.classList.add("tooltippopup","activeA")
+	li.setAttribute("id",listitems[3])
 	let idmakerstuffig ="MenuItemID"+currentidcount;
 	li.setAttribute("id",idmakerstuffig)
 	let name=document.createElement("p")
@@ -84,6 +85,9 @@ function makeitem(listitems){
 	span.classList.add("tooltippopuptext")
 	let spanimage=document.createElement("img")
 	spanimage.setAttribute("src",listitems[1])
+	let searchspan=document.createElement("span")
+	searchspan.classList.add("listforsearch","inactive")
+	searchspan.innerHTML=(listitems[0]+" "+listitems[3])
 	li.appendChild(name)
 	li.appendChild(price)
 	li.appendChild(imageminus)
@@ -92,19 +96,22 @@ function makeitem(listitems){
 	span.appendChild(spanimage)
 	li.appendChild(itemtotal)
 	li.appendChild(span)
+	li.appendChild(searchspan)
 	return li
 }
 
 function listmaker(category){
 	for (let i = 0; i < category.length; i++){
 		let parts=document.createElement("div")
-		parts.classList.add("recomended_title")
+		parts.classList.add("recomended_title","activeA")
 		let parttitle=document.createElement("h4")
 		parttitle.innerHTML=categories[i]
 		parts.appendChild(parttitle)
 		let findposition=document.getElementById("MenuContainerGroups")
 		findposition.appendChild(parts)
 		let ul=document.createElement("ul")
+		ul.classList.add("activeA")
+		ul.setAttribute("id",categories[i])
 		let tmpcontainer = ShowItems(categories[i],menuitems)
 		for (let i = 0; i < tmpcontainer.length; i++){
 			ul.appendChild(makeitem(tmpcontainer[i]))
@@ -364,6 +371,21 @@ jQuery(document).ready(function ($) {
         return false;
     }); 
  
- new WOW().init();
-
+	$(".searchbarstuff").on("keyup", function() {
+		let input = document.getElementById('searchbarstuff').value
+		input = input.toLowerCase();
+		let x = document.getElementsByClassName('listforsearch');
+		
+		for (let i = 0; i < x.length; i++) {
+			if (!x[i].innerHTML.toLowerCase().includes(input)) {
+				x[i].parentNode.classList.remove("activeA")
+				x[i].parentNode.classList.add("inactiveA")
+				
+			}
+			else {
+				x[i].parentNode.classList.remove("inactiveA")
+				x[i].parentNode.classList.add("activeA")
+			}
+		}
+	});
 });

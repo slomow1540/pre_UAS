@@ -1627,3 +1627,9 @@ button.clickheretopayup:hover{
 	background:#d6962c;
 	color:#fff;
 }
+
+.searchbarstuff input{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
