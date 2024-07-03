@@ -30,7 +30,7 @@ for (let i = 0; i < menuitems.length; i++) {
 	menuitems[i][1] = `assets/images/${menuitems[i][1]}.jpg`;
 }
 listmaker(categories)
-ShowItems(categories,menuitems)
+//ShowItems(categories,menuitems)
 //end of starter code
 
 
@@ -158,6 +158,20 @@ function additemtolist(item,int,dataid){
         }
     }
 }
+function UpdateItemList(){
+    for (let i = 0; i < menuitems.length; i++) {
+		//console.log(document.getElementById(("MenuItemID"+i)).children[0].innerHTML)
+		//console.log(menuitems[i][0])
+		for(let j = 0; j <menuitems.length; j++){
+			let a = document.getElementById(("MenuItemID"+i)).children[0].textContent 
+			if(a == menuitems[j][0]){
+				document.getElementById(("MenuItemID"+i)).children[5].innerHTML=("$"+(menuitems[j][2]*menuitems[j][4]))
+				break
+			}
+		}
+		
+    }
+}
 
 
 
@@ -201,6 +215,63 @@ jQuery(document).ready(function ($) {
 		displaySlides(currindex += 1)
 	});
 
+	const sort_AZ = document.querySelector('.buttonsortAZ');
+	const sort_ZA = document.querySelector('.buttonsortZA');
+	sort_AZ.addEventListener('click', function() {
+		menuitems.sort()
+		document.getElementById("MenuContainerGroups").innerHTML="";
+		currentidcount=0
+		listmaker(categories)
+		
+		//a
+		const likeBtn = document.querySelectorAll(".like_button");
+		let clicked = false;
+		likeBtn.forEach(function (item) {
+			item.addEventListener("click", (event) => {
+				let likeIcon = item.querySelector(".icon");
+				let count = item.querySelector(".likecounter");
+				if (+count.textContent == 0) {
+					clicked = true;
+					likeIcon.innerHTML = `<i class="fas fa-thumbs-up"></i>`;
+					count.textContent++;
+				} else {
+					clicked = false;
+					likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
+					count.textContent--;
+				}
+			});
+		})
+		UpdateItemList()
+	});
+
+	sort_ZA.addEventListener('click', function() {
+		menuitems.sort();
+		menuitems.reverse();
+		document.getElementById("MenuContainerGroups").innerHTML="";
+		currentidcount=0
+		listmaker(categories)
+		
+		//a
+		const likeBtn = document.querySelectorAll(".like_button");
+		let clicked = false;
+		likeBtn.forEach(function (item) {
+			item.addEventListener("click", (event) => {
+				let likeIcon = item.querySelector(".icon");
+				let count = item.querySelector(".likecounter");
+				if (+count.textContent == 0) {
+					clicked = true;
+					likeIcon.innerHTML = `<i class="fas fa-thumbs-up"></i>`;
+					count.textContent++;
+				} else {
+					clicked = false;
+					likeIcon.innerHTML = `<i class="far fa-thumbs-up"></i>`;
+					count.textContent--;
+				}
+			});
+		})
+		UpdateItemList()
+	});
+
 	const clickheretopayup = document.querySelector('.clickheretopayup');
 	clickheretopayup.addEventListener('click', function() {
 		let totalcheckout=0;
@@ -212,6 +283,10 @@ jQuery(document).ready(function ($) {
 		document.getElementById("clickheretopayup").classList.add("inactiveA")
 		document.getElementById("searchbarstuff").classList.remove("activeA")
 		document.getElementById("searchbarstuff").classList.add("inactiveA")
+		document.getElementById("buttonsortAZ").classList.remove("activeA")
+		document.getElementById("buttonsortAZ").classList.add("inactiveA")
+		document.getElementById("buttonsortZA").classList.remove("activeA")
+		document.getElementById("buttonsortZA").classList.add("inactiveA")
 		for (let i = 0; i < menuitems.length; i++) {
 			if(menuitems[i][4]!=0){
 				let wahtevernameguh=document.createElement("ul")
