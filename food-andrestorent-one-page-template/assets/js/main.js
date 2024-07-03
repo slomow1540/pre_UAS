@@ -11,7 +11,7 @@ const menuitems=[
 	["Tropical Sunset Cocktail","tropicalSunset",10.00,"Drinks",0],
 	["Matcha Madness Latte","matchaMadnessLatte",5.75,"Drinks",0],
 	["Citrus Splash Refresher","citrusSplashRefresher",6.00,"Drinks",0],
-	["Matcha Madness Latte","mintyMojito",9.00,"Drinks",0],
+	["Minty MOjito Mocktail","mintyMojito",9.00,"Drinks",0],
 	["Spaghetti Carbonara","spaghettiCarbonara",6.75,"Main Courses",0],
 	["Grilled Chicken Breast","grilledChickenBreast",14.00,"Main Courses",0],
 	["Beef Steak","beefSteak",18.00,"Main Courses",0],
