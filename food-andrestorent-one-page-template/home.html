@@ -391,8 +391,8 @@ event Section
                             <div class="text-center row-md-1 inactiveA" id="menucheckout">
                                 <ul id="CheckOutItems">
                                     <ul id="Checkout-item">
-                                        <li class="col-sm-8 text-left"><p>item name</p></li>
-                                        <li class="col-sm-4 text-right"><p>price</p></li>
+                                        <li class="col-sm-8 text-left"><p>Item Name</p></li>
+                                        <li class="col-sm-4 text-right"><p>Price</p></li>
                                     </ul>
                                 </ul>
                                 <button class="btn-lg Payeverything"><h1 style="color: black;">Payment</h1></button>
@@ -404,7 +404,7 @@ event Section
                                 </div>
                             </div>
                             <div class="row-md-8 text-center activeA" id="clickheretopayup">
-                                <button class="clickheretopayup"><h1 style="color: black;">CheckOut</h1></button>
+                                <button class="clickheretopayup"><h1 style="color: black; margin-bottom: 20px;">CheckOut</h1></button>
                             </div>
                         </div>
                     </div>
@@ -412,91 +412,98 @@ event Section
             </section>
         </div>
 
+        <!-- Highlight Section -->
         <div class="HighlightGroup inactiveA">
             <section id="portfolio" class="portfolio">
                 <div class="container">
-                    <div class="row">
-                        <div class="portfolio_content text-center  wow fadeIn" data-wow-duration="0.5s">
-                            <div class="col-md-12">
-                                <div class="head_title text-center">
-                                    <h4>Highlight</h4>
-                                    <h3>Of The Month</h3>
-                                </div>
+                    <div class="main_pakeg_content">
+                        <div class="row">
+                            <div class="head_title text-center">
+                                <h4>Highlight</h4>
+                                <h3>Of&nbsp;<div class="value-slider">January</div></h3>
+                            </div>
     
-                                <div class="main_portfolio_content text-right wow rotateInDownRight">
-                                    <div class="col-md-offset-6 col-sm-8 col-sm-offset-4">
-                                        <div class="recommend_text">
-                                            <div class="recommend_title">
-                                                <h4>Spaghetti Carbonara</h4>
-                                            </div>
-                                        </div>
+                            <div class="custom-body">
+                                <div class="slider-container">
+                                    <input type="range" min="1" max="12" value="1" class="slider" id="monthSlider">
+                                    <div class="month-labels">
+                                        <span>Jan</span>
+                                        <span>Feb</span>
+                                        <span>Mar</span>
+                                        <span>Apr</span>
+                                        <span>May</span>
+                                        <span>Jun</span>
+                                        <span>Jul</span>
+                                        <span>Aug</span>
+                                        <span>Sep</span>
+                                        <span>Oct</span>
+                                        <span>Nov</span>
+                                        <span>Dec</span>
+                                    </div>
+                                    <div class="image-container">
+                                        <img src="assets/images/beefSteak.jpg" class="month-image month-1">
+                                        <img src="assets/images/cheesecake.jpg" class="month-image month-1">
+                                        <img src="assets/images/citrusSplashRefresher.jpg" class="month-image month-2">
+                                        <img src="assets/images/berry.jpg" class="month-image month-2">
+                                        <img src="assets/images/grilledChickenBreast.jpg" class="month-image month-3">
+                                        <img src="assets/images/tiramisu.jpg" class="month-image month-3">
+                                        <img src="assets/images/matchaMadnessLatte.jpg" class="month-image month-4">
+                                        <img src="assets/images/grilledChickenBreast.jpg" class="month-image month-4">
+                                        <img src="assets/images/applepie.jpg" class="month-image month-5">
+                                        <img src="assets/images/mintyMojito.jpg" class="month-image month-5">
+                                        <img src="assets/images/cremebrulee.jpg" class="month-image month-6">
+                                        <img src="assets/images/lavacake.jpg" class="month-image month-6">
+                                        <img src="assets/images/vegetableStirFry.jpg" class="month-image month-7">
+                                        <img src="assets/images/cheesecake.jpg" class="month-image month-7">
+                                        <img src="assets/images/citrusSplashRefresher.jpg" class="month-image month-8">
+                                        <img src="assets/images/berry.jpg" class="month-image month-8">
+                                        <img src="assets/images/beefSteak.jpg" class="month-image month-9">
+                                        <img src="assets/images/applepie.jpg" class="month-image month-9">
+                                        <img src="assets/images/citrusSplashRefresher.jpg" class="month-image month-10">
+                                        <img src="assets/images/vegetableStirFry.jpg" class="month-image month-10">
+                                        <img src="assets/images/lavacake.jpg" class="month-image month-11">
+                                        <img src="assets/images/panSearedSalmon.jpg" class="month-image month-11">
+                                        <img src="assets/images/tropicalSunset.jpg" class="month-image month-12">
+                                        <img src="assets/images/spaghettiCarbonara.jpg" class="month-image month-12">
                                     </div>
                                 </div>
-                                <div class="main_portfolio_content">
-                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                        <img src="assets/images/p1.png" alt="" />
-                                        <div class="portfolio_images_overlay text-center">
-                                            <h6>Egg Noodle Delight</h6>
-                                            <p class="product_price">$12.00</p>
+                            </div>                          
+    
+                            <div class="best-seller text-center">
+                                <div class="icon"></div>
+                                <h4>Our Best Seller</h4>
+                                <div class="icon"></div>
+                            </div>
+    
+                            <div class="recommend_one text-left wow rotateInDownRight">
+                                <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
+                                    <div class="recommend_text">
+                                        <div class="pakeg_title">
+                                            <h4>Emerald Essence</h4>
                                         </div>
+                                        <p>Emerald Essence, a premium white wine from the finest green grapes, exudes elegance and sophistication with its vibrant, crystal-clear hue akin to precious emeralds. It enchants with a delicate bouquet of green apple, pear, and citrus blossom, intertwined with subtle floral notes, while the palate delights in a harmonious blend of crisp lime and grapefruit acidity balanced by smooth, velvety hints of ripe melon and honeydew. Perfect for any occasion, Emerald Essence pairs seamlessly with light seafood, fresh salads, creamy cheeses, and decadent desserts, promising an unforgettable experience of refinement and grace whether enjoyed on a warm summer evening or shared at a celebratory gathering.</p>
                                     </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                        <img src="assets/images/p2.png" alt="" />
-                                        <div class="portfolio_images_overlay text-center">
-                                            <h6>Nutty Fruit Salad</h6>
-                                            <p class="product_price">$5.75</p>
-                                        </div>								
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                        <img src="assets/images/p3.png" alt="" />
-                                        <div class="portfolio_images_overlay text-center">
-                                            <h6>Roast Whole Chicken</h6>
-                                            <p class="product_price">$15.70</p>
-                                        </div>								
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                        <img src="assets/images/p4.png" alt="" />
-                                        <div class="portfolio_images_overlay text-center">
-                                            <h6>Fried Spring Rolls</h6>
-                                            <p class="product_price">$4.50</p>
-                                        </div>								
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                        <img src="assets/images/p5.png" alt="" />
-                                        <div class="portfolio_images_overlay text-center">
-                                            <h6>Gourmet Platter</h6>
-                                            <p class="product_price">$17.50</p>
-                                        </div>								
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                        <img src="assets/images/p6.png" alt="" />
-                                        <div class="portfolio_images_overlay text-center">
-                                            <h6>Curry Crispy Wontons</h6>
-                                            <p class="product_price">$11.00</p>
-                                        </div>								
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                        <img src="assets/images/p7.png" alt="" />
-                                        <div class="portfolio_images_overlay text-center">
-                                            <h6>Tex-Mex Fiesta Platter</h6>
-                                            <p class="product_price">$7.50</p>
-                                        </div>								
-                                    </div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
-                                        <img src="assets/images/p8.png" alt="" />
-                                        <div class="portfolio_images_overlay text-center">
-                                            <h6>Sunny Side-Up Duo with Zesty Lemon Twist</h6>
-                                            <p class="product_price">$3.50</p>
-                                        </div>								
+                                </div>
+                            </div>
+                            
+                            <div class="best-seller text-center">
+                                <div class="icon"></div>
+                                <h4>Top Recommendation</h4>
+                                <div class="icon"></div>
+                            </div>
+    
+                            <div class="recommend_two text-right wow rotateInDownLeft">
+                                <div class="col-md-6 col-sm-8">
+                                    <div class="recommend_text">
+                                        <div class="pakeg_title">
+                                            <h4>Spicy Sambal Chicken Fillet</h4>
+                                        </div>
+                                        <p>Savor the bold and tantalizing flavors of our Spicy Sambal Chicken Fillet. This dish features succulent, tender chicken fillet perfectly grilled to golden perfection and generously topped with a vibrant, fiery sambal sauce. Each bite delivers a harmonious blend of spicy heat and savory richness, complemented by subtle hints of garlic, lime, and fresh herbs. Perfectly paired with steamed rice or crisp vegetables, this dish promises a delightful culinary experience that will ignite your taste buds and leave you craving more. Ideal for spice lovers and those seeking a unique twist on classic grilled chicken.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-                    </div>    
-                </div>
-                <div class="show-container">
                 </div>
             </section>
         </div>
@@ -606,5 +613,6 @@ event Section
         <script src="assets/js/wow/wow.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/highlight.js"></script>
     </body>
 </html>

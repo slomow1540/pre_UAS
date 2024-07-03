@@ -3,6 +3,7 @@
  */
 
 "use strict";
+
 //menu item [name,image source, price,category,curritem count(no change please)]
 const categories=["Drinks","Main Courses","Desserts"]
 const menuitems=[
@@ -22,6 +23,7 @@ const menuitems=[
 	["Apple Pie","applepie",4.50,"Desserts",0],
 	["Creme Brulee","cremebrulee",6.00,"Desserts",0]
 ]
+
 //starter code
 let currentidcount =0;
 for (let i = 0; i < menuitems.length; i++) {

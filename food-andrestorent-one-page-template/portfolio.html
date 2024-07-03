@@ -1,9 +1,6 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
+<html class="no-js" lang="">
+<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Food Restaurant</title>
@@ -81,12 +78,10 @@
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="home.html">Home</a></li>
-                                        <li><a href="event.html">Events</a></li>
-                                        <li><a href="feature.html">Features</a></li>
-                                        <li><a href="portfolio.html">Recommendation</a></li>
-                                        <li><a href="ourPakeg.html">Menu</a></li>
-                                        <li><a href="team.html">Teams</a></li>
+                                        <li><a href="#Home" class="TopBarHome">Home</a></li>
+                                        <li><a href="#Event" class="TopBarEvent">Events</a></li>
+                                        <li><a href="#portofolio" class="TopBarHighlight">Highlight</a></li>
+                                        <li><a href="#Menu" class="TopBarMenu">Menu</a></li>
                                         <li><a href="#mobaileapps">Pages</a></li>
                                         <li><a href="reservation.html" class="booking">Reservation</a></li>
                                     </ul>
@@ -104,29 +99,65 @@
                     <div class="row">
                         <div class="head_title text-center">
                             <h4>Highlight</h4>
-                            <h3>OF THE MONTH</h3>
+                            <h3>Of&nbsp;<div class="value-slider">January</div></h3>
                         </div>
 
                         <div class="custom-body">
                             <div class="slider-container">
                                 <input type="range" min="1" max="12" value="1" class="slider" id="monthSlider">
                                 <div class="month-labels">
-                                  <span>Jan</span>
-                                  <span>Feb</span>
-                                  <span>Mar</span>
-                                  <span>Apr</span>
-                                  <span>May</span>
-                                  <span>Jun</span>
-                                  <span>Jul</span>
-                                  <span>Aug</span>
-                                  <span>Sep</span>
-                                  <span>Oct</span>
-                                  <span>Nov</span>
-                                  <span>Dec</span>
+                                    <span>Jan</span>
+                                    <span>Feb</span>
+                                    <span>Mar</span>
+                                    <span>Apr</span>
+                                    <span>May</span>
+                                    <span>Jun</span>
+                                    <span>Jul</span>
+                                    <span>Aug</span>
+                                    <span>Sep</span>
+                                    <span>Oct</span>
+                                    <span>Nov</span>
+                                    <span>Dec</span>
+                                </div>
+                                <div class="image-container">
+                                    <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                        <img src="assets/images/p1.png" class="month-image month-1">
+                                        <div class="portfolio_images_overlay text-center">
+                                            <h6>Beef Steak</h6>
+                                            <p class="product_price">$12</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="image-wrapper">
+                                        <div class="hover-text left">Cheese Cake</div>
+                                        <img src="assets/images/cheesecake.jpg" class="month-image month-1">
+                                    </div>
+                                    
+                                    <img src="assets/images/citrusSplashRefresher.jpg" class="month-image month-2">
+                                    <img src="assets/images/berry.jpg" class="month-image month-2">
+                                    <img src="assets/images/grilledChickenBreast.jpg" class="month-image month-3">
+                                    <img src="assets/images/tiramisu.jpg" class="month-image month-3">
+                                    <img src="assets/images/matchaMadnessLatte.jpg" class="month-image month-4">
+                                    <img src="assets/images/grilledChickenBreast.jpg" class="month-image month-4">
+                                    <img src="assets/images/applepie.jpg" class="month-image month-5">
+                                    <img src="assets/images/mintyMojito.jpg" class="month-image month-5">
+                                    <img src="assets/images/cremebrulee.jpg" class="month-image month-6">
+                                    <img src="assets/images/lavacake.jpg" class="month-image month-6">
+                                    <img src="assets/images/vegetableStirFry.jpg" class="month-image month-7">
+                                    <img src="assets/images/cheesecake.jpg" class="month-image month-7">
+                                    <img src="assets/images/citrusSplashRefresher.jpg" class="month-image month-8">
+                                    <img src="assets/images/berry.jpg" class="month-image month-8">
+                                    <img src="assets/images/beefSteak.jpg" class="month-image month-9">
+                                    <img src="assets/images/applepie.jpg" class="month-image month-9">
+                                    <img src="assets/images/citrusSplashRefresher.jpg" class="month-image month-10">
+                                    <img src="assets/images/vegetableStirFry.jpg" class="month-image month-10">
+                                    <img src="assets/images/lavacake.jpg" class="month-image month-11">
+                                    <img src="assets/images/panSearedSalmon.jpg" class="month-image month-11">
+                                    <img src="assets/images/tropicalSunset.jpg" class="month-image month-12">
+                                    <img src="assets/images/spaghettiCarbonara.jpg" class="month-image month-12">
                                 </div>
                             </div>
-                        </div>
-                          
+                        </div>                          
 
                         <div class="best-seller text-center">
                             <div class="icon"></div>
@@ -134,9 +165,9 @@
                             <div class="icon"></div>
                         </div>
 
-                        <div class="recommend_one text-left wow rotateInDownRight">
+                        <div class="highlight_one text-left wow rotateInDownRight">
                             <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
-                                <div class="recommend_text">
+                                <div class="highlight_text">
                                     <div class="pakeg_title">
                                         <h4>Emerald Essence</h4>
                                     </div>
@@ -151,9 +182,9 @@
                             <div class="icon"></div>
                         </div>
 
-                        <div class="recommend_two text-right wow rotateInDownLeft">
+                        <div class="highlight_two text-right wow rotateInDownLeft">
                             <div class="col-md-6 col-sm-8">
-                                <div class="recommend_text">
+                                <div class="highlight_text">
                                     <div class="pakeg_title">
                                         <h4>Spicy Sambal Chicken Fillet</h4>
                                     </div>
@@ -243,7 +274,6 @@
                 </div>
             </div>
         </section>
-
 
         <!--Footer-->
         <footer id="footer" class="footer">

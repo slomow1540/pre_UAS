@@ -1,16 +1,19 @@
 $(document).ready(function() {
-    // Ambil elemen slider
-    var slider = document.getElementById("monthSlider");
-  
-    // Atur event listener untuk mengupdate label bulan saat nilai slider berubah
-    slider.oninput = function() {
-      var monthLabels = $(".month-labels span");
-      var index = slider.value - 1; // Ambil index bulan berdasarkan nilai slider
-      monthLabels.removeClass("active"); // Hapus kelas active dari semua label
-      monthLabels.eq(index).addClass("active"); // Tambahkan kelas active pada label bulan saat ini
-    };
-  
-    // Inisialisasi untuk memastikan label bulan Januari aktif pada awalnya
-    $(".month-labels span:first-child").addClass("active");
+  var $slider = $("#monthSlider");
+  var $valueSlider = $(".value-slider");
+  var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  $slider.on("input", function() {
+      var index = $slider.val() - 1; 
+      var $monthLabels = $(".month-labels span");
+      $monthLabels.removeClass("active");
+      $monthLabels.eq(index).addClass("active");
+      $valueSlider.text(months[index]);
+      
+      $(".month-image").hide();
+      $(".month-" + (index + 1)).show();
   });
-  
+
+  $(".month-labels span:first-child").addClass("active");
+  $(".month-1").show();
+});

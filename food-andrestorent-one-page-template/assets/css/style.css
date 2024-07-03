@@ -909,7 +909,7 @@ a.navbar-brand.our_logo{
     border-radius: 5px;
     background-color: bisque;
     cursor: pointer;
-}b
+}
 
 .event-container{
     display: flex; 
@@ -1013,17 +1013,15 @@ a.navbar-brand.our_logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-  }
+    margin-bottom: 20px;
+}
 
-  .slider-container {
+.slider-container {
     width: 80%;
     max-width: 600px;
-  }
-  
-  .slider {
+}
+
+.slider {
     width: 100%;
     -webkit-appearance: none;
     appearance: none;
@@ -1034,38 +1032,94 @@ a.navbar-brand.our_logo{
     transition: opacity .15s ease-in-out;
     border-radius: 10px;
     margin-top: 10px;
-  }
-  
-  .slider::-webkit-slider-thumb {
+}
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #4CAF50;
+    background: #da9b31;
     cursor: pointer;
     border-radius: 50%;
-  }
-  
-  .slider::-moz-range-thumb {
+}
+
+.slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: #4CAF50;
+    background: #da9b31;
     cursor: pointer;
     border-radius: 50%;
-  }
-  
-  .month-labels {
+}
+
+.month-labels {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-  }
-  
-  .month-labels span {
+}
+
+.month-labels span {
     flex: 1;
     text-align: center;
     font-size: 12px;
     color: #666;
-  }
+}
+
+.value-slider {
+    margin-left: 5px; 
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.single_portfolio_text{
+	display:inline-block;
+	padding:0;
+	position:relative;
+	overflow:hidden;
+
+}
+.single_portfolio_text img{
+	width:100%;
+}
+
+.single_portfolio_text:hover .portfolio_images_overlay{
+	top: 28px;
+    left: 14px;
+}
+
+.portfolio_images_overlay{
+	width: 90%;
+    height: 80%;
+    background: rgba(0, 0, 0, .5);
+    padding: 20px;
+    margin: 0 auto;
+    top:-100%;
+    left: 14px;
+    position: absolute;
+	transition:.6s;
+}
+.portfolio_images_overlay h6{
+	text-transform:uppercase;
+	color:#fff;
+	font-size:1.3125rem;
+	line-height:2rem;
+}
+
+.portfolio_images_overlay p.product_price{
+	font-size:2.5725rem;
+	color:#fff;
+	line-height:3rem;
+}
+
+.month-image {
+    margin: 10px;
+    display: none;
+}
 
 /* Portfolio Section css */
 .portfolio {
@@ -1089,6 +1143,9 @@ a.navbar-brand.our_logo{
 }
 
 .head_title h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     font-family: 'Montserrat';
 }
@@ -1100,7 +1157,8 @@ a.navbar-brand.our_logo{
 .best-seller h4 {
     padding-top: 15px;
 }
-.recommend_text {
+
+.highlight_text {
     background: #fff;
     padding: 30px;
     text-align: left;
@@ -1126,19 +1184,19 @@ a.navbar-brand.our_logo{
     z-index: 1; 
 }
 
-.recommend_title h4 {
+.highlight_title h4 {
     font-family: 'Pacifico', cursive;
     margin: 0;
 }
 
-.recommend_text p {
+.highlight_text p {
     text-align: justify;
     padding: 15px 10px;
     margin-top: 20px;
 }
 
-.recommend_one,
-.recommend_two {
+.highlight_one,
+.highlight_two {
     padding: 30px;
     overflow: hidden;
     margin-top: 60px;
@@ -1146,15 +1204,19 @@ a.navbar-brand.our_logo{
     position: relative;
 }
 
-.recommend_one {
+.highlight_one {
     background: url('../images/newsone.jpg') left center no-repeat;
 }
 
-.recommend_two {
+.highlight_two {
     background: url('../images/newstwo.jpg') right center no-repeat;
 }
 
 /*Menu Section css */
+.ourPakeg .main_pakeg_content {
+	background: url('../images/textbg.jpg');
+}
+
 .ourPakeg .main_pakeg_content .head_title h3{
 	color:#fff;
 	
@@ -1367,7 +1429,6 @@ a.navbar-brand.our_logo{
 
 .single_widget h3{
     font-size:1.875rem;
-
 	font-family: 'Pacifico', cursive;	
 }
 .single_widget_info p{
