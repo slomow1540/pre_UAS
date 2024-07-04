@@ -544,19 +544,19 @@ event Section
                                     <div class="group-fill">
                                         <label for="First Name" class="label required">First Name</label>
                                         <br>
-                                        <input class="fill-form" type="text" placeholder="Enter Your First Name" required>
+                                        <input class="fill-form" type="text" placeholder="Enter Your First Name" id="reservationFirstname" required>
                                     </div>
                         
                                     <div class="group-fill">
                                         <label for="Last Name" class="label required">Last Name</label>
                                         <br>
-                                        <input class="fill-form" type="text" placeholder="Enter Your Last Name" required>
+                                        <input class="fill-form" type="text" placeholder="Enter Your Last Name" id="reservationLastname" required>
                                     </div>
                         
                                     <div class="group-fill">
                                         <label for="Phone" class="label required">Phone</label>
                                         <br>
-                                        <input class="fill-form" type="tel" placeholder="Enter Your Phone Number" required>
+                                        <input class="fill-form" type="tel" placeholder="Enter Your Phone Number" id="reservationphone" required>
                                     </div>
                                 </ul>
                         
@@ -564,19 +564,19 @@ event Section
                                     <div class="group-fill">
                                         <label for="Email" class="label required">Email</label>
                                         <br>
-                                        <input class="fill-form" type="email" placeholder="Enter Your Email" required>
+                                        <input class="fill-form" type="email" placeholder="Enter Your Email" id="reservationemail" required>
                                     </div>
                         
                                     <div class="group-fill">
                                         <label for="Date" class="label required">Date</label>
                                         <br>
-                                        <input class="fill-form" type="date" placeholder="Enter Your Date" required>
+                                        <input class="fill-form" type="date" placeholder="Enter Your Date" id="reservationdate" required>
                                     </div>
                         
                                     <div class="group-fill">
                                         <label for="Time" class="label required">Time</label>
                                         <br>
-                                        <input class="fill-form" type="datetime" placeholder="Enter the Time" required>
+                                        <input class="fill-form" type="datetime" placeholder="Enter the Time" id="reservationtime" required>
                                     </div>
                                 </ul>
                         
@@ -584,31 +584,31 @@ event Section
                                     <div class="group-fill">
                                         <label for="Child" class="label required">Child (Under 2 years)</label>
                                         <br>
-                                        <select name="children" class="fill-form">
+                                        <select name="children" class="fill-form" id="reservationselect">
                                             <option value>Choose Child (Under 2 years)</option>
-                                            <option value="1">1 Children</option>
-                                            <option value="2">2 Children</option>
-                                            <option value="3">3 Children</option>
-                                            <option value="4">4 Children</option>
-                                            <option value="5">5 Children</option>
-                                            <option value="6">6 Children</option>
-                                            <option value="7">7 Children</option>
-                                            <option value="8">8 Children</option>
-                                            <option value="9">9 Children</option>
-                                            <option value="10">10 Children</option>
+                                            <option value="1 Children">1 Children</option>
+                                            <option value="2 Children">2 Children</option>
+                                            <option value="3 Children">3 Children</option>
+                                            <option value="4 Children">4 Children</option>
+                                            <option value="5 Children">5 Children</option>
+                                            <option value="6 Children">6 Children</option>
+                                            <option value="7 Children">7 Children</option>
+                                            <option value="8 Children">8 Children</option>
+                                            <option value="9 Children">9 Children</option>
+                                            <option value="10 Children">10 Children</option>
                                         </select>
                                     </div>
                         
                                     <div class="group-fill">
                                         <label for="Occasion" class="label required">Occasion</label>
                                         <br>
-                                        <select name="occasion" class="fill-form">
+                                        <select name="occasion" class="fill-form" id="reservationoccation">
                                             <option value>Choose occasion</option>
-                                            <option value="1">Breakfast</option>
-                                            <option value="2">Lunch</option>
-                                            <option value="3">Dinner</option>
-                                            <option value="4">Birthday</option>
-                                            <option value="5">Anniversary</option>
+                                            <option value="Breakfast">Breakfast</option>
+                                            <option value="Lunch">Lunch</option>
+                                            <option value="Dinner">Dinner</option>
+                                            <option value="Birthday">Birthday</option>
+                                            <option value="Anniversary">Anniversary</option>
                                         </select>
                                     </div>
                                 </ul>
@@ -617,7 +617,7 @@ event Section
                                     <div class="group-fill">
                                         <label for="request" class="label required">Special Request</label>
                                         <br>
-                                        <textarea class="fill-form request" placeholder="Please Specify your Request (If Any)" required></textarea>
+                                        <textarea class="fill-form request" placeholder="Please Specify your Request (If Any)" id="reservationrequest" required></textarea>
                                     </div>
                                 </ul>
                             </div>
@@ -638,10 +638,14 @@ event Section
                             </div>
 
                             <div class="buttonRes">
-                                <button class="btn-lg">Reservation</button>
+                                <button class="btn-lg reservationitembutton" type='button'>Reservation</button>
                             </div>
                         </div>
                     </form>
+                    <br>
+                    <div class="wahteverthiswillbe">
+
+                    </div>
 
                 </div>
             </div>

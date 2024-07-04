@@ -214,7 +214,48 @@ jQuery(document).ready(function ($) {
 	rightImage.addEventListener('click', function() {
 		displaySlides(currindex += 1)
 	});
+	let reservationitembutton=document.querySelector(".reservationitembutton")
+		reservationitembutton.addEventListener('click', function() {
+			let a =document.getElementById("reservationFirstname").value
+			let b =document.getElementById("reservationLastname").value 
+			let a1 =document.getElementById("reservationphone").value 
+			let a2 =document.getElementById("reservationemail").value //reservationemail
+			let a3 =document.getElementById("reservationdate").value //reservationdate
+			let a4 =document.getElementById("reservationtime").value //reservationtime
+			let a5 =document.getElementById("reservationselect").value//reservationselect
+			let a6 =document.getElementById("reservationoccation").value//reservationoccation
+			let a7 =document.getElementById("reservationrequest").value //reservationrequest
+			var item1 = $("<p></p>").text("Name = "+a+" "+ b); // name
+			var item2 = $("<p></p>").text("Phone = "+a1); //reservationphone
+			var item3 = $("<p></p>").text("email = "+a2); //email
+			var item4 = $("<p></p>").text("date = "+a3); //reservationdate
+			var item1a = $("<p></p>").text("time = "+a4); // time
+			var item2a = $("<p></p>").text("childrens = "+a5); //select
+			var item3a = $("<p></p>").text("Occasion = "+a6); //occation
 
+			var item4c = $("<p></p>").text("special request = "+a7); //request
+			
+			
+			
+			
+			
+			var itemmain1 = $("<ul class='col-md-6'></ul>").append(item1);
+			itemmain1.append(item2)
+			itemmain1.append(item3)
+			itemmain1.append(item4)
+			var itemmain2 = $("<ul class='col-md-6'></ul>").append(item1a);
+			itemmain2.append(item2a)
+			itemmain2.append(item3a)
+			var itemmain4 = $("<ul class='col itemboxreservation'></ul>").append(itemmain1)
+			itemmain4.append(itemmain2)
+			var itemmain3 = $("<ul></ul>").append(item4c);
+			var itemmain = $("<li class='reservationitems ul-wrapper'></li>").append(itemmain4);
+			itemmain.append(itemmain3)
+			//reservationitemlistA itemmain
+			var itemmaindiv = $("<div class='reservationitemlist active'></div>").append(itemmain);
+			$(".wahteverthiswillbe").append(itemmaindiv)
+			
+	});
 	const sort_AZ = document.querySelector('.buttonsortAZ');
 	const sort_ZA = document.querySelector('.buttonsortZA');
 	sort_AZ.addEventListener('click', function() {
@@ -223,7 +264,7 @@ jQuery(document).ready(function ($) {
 		currentidcount=0
 		listmaker(categories)
 		
-		//a
+		//a 
 		const likeBtn = document.querySelectorAll(".like_button");
 		let clicked = false;
 		likeBtn.forEach(function (item) {
