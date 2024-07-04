@@ -985,33 +985,6 @@ a.navbar-brand.our_logo{
     font-size: 25px;
 }
 
-/* Features section css */
-.features{
-	background:url(../images/ftbg.jpg) center center no-repeat;
-	-moz-background-size: cover;
-	-webkit-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	width: 100%;
-	overflow: hidden;	
-}
-.main_features_content_area{
-	padding:120px 0px;
-	display:inline-block;
-}
-
-.main_features_content{
-	background:url(../images/ft.png) right center no-repeat;
-	padding:40px;
-	overflow:hidden;
-}
-
-.single_features_text{
-	background:url(../images/textbg.jpg) center center no-repeat;
-	padding:30px;
-    background-size:cover;
-}
-
 /* Slider Portfolio css */
 .custom-body {
     font-family: Arial, sans-serif;
