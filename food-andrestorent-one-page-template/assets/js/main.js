@@ -250,7 +250,7 @@ jQuery(document).ready(function ($) {
 			var itemmain = $("<li class='reservationitems'></li>").append(itemmain4);
 			itemmain.append(itemmain3)
 			//reservationitemlistA itemmain
-			var itemmaindiv = $("<div class='reservationitemlist active'></div>").append(itemmain);
+			var itemmaindiv = $("<ul class='reservationitemlist active'></ul>").append(itemmain);
 			$(".wahteverthiswillbe").append(itemmaindiv)
 			
 	});
