@@ -215,46 +215,51 @@ jQuery(document).ready(function ($) {
 	rightImage.addEventListener('click', function() {
 		displaySlides(currindex += 1)
 	});
-	let reservationitembutton=document.querySelector(".reservationitembutton")
-		reservationitembutton.addEventListener('click', function() {
-			let a =document.getElementById("reservationFirstname").value
-			let b =document.getElementById("reservationLastname").value 
-			let a1 =document.getElementById("reservationphone").value 
-			let a2 =document.getElementById("reservationemail").value //reservationemail
-			let a3 =document.getElementById("reservationdate").value //reservationdate
-			let a4 =document.getElementById("reservationtime").value //reservationtime
-			let a5 =document.getElementById("reservationselect").value//reservationselect
-			let a6 =document.getElementById("reservationoccation").value//reservationoccation
-			let a7 =document.getElementById("reservationrequest").value //reservationrequest
-			var item1 = $("<p></p>").text("Name : "+a+" "+ b); // name
-			var item2 = $("<p></p>").text("Phone : "+a1); //reservationphone
-			var item3 = $("<p></p>").text("Email : "+a2); //email
-			var item4 = $("<p></p>").text("Date : "+a3); //reservationdate
-			var item1a = $("<p></p>").text("Time : "+a4); // time
-			var item2a = $("<p></p>").text("Childrens : "+a5); //select
-			var item3a = $("<p></p>").text("Occasion : "+a6); //occation
-			var item4c = $("<p></p>").text("Special Request : "+a7); //request
-			
-			
 
-			
+	document.getElementById('reservationButton').addEventListener('click', function() {
+		if (!document.getElementById('accept').checked) {
+			alert('You must agree to the terms and conditions before making a reservation.');
+		} else {
+			alert('Reservation submitted successfully!');
+
+			let a = document.getElementById("reservationFirstname").value;
+			let b = document.getElementById("reservationLastname").value;
+			let a1 = document.getElementById("reservationphone").value;
+			let a2 = document.getElementById("reservationemail").value;
+			let a3 = document.getElementById("reservationdate").value;
+			let a4 = document.getElementById("reservationtime").value;
+			let a5 = document.getElementById("reservationselect").value;
+			let a6 = document.getElementById("reservationoccation").value;
+			let a7 = document.getElementById("reservationrequest").value;
+
+			var item1 = $("<p></p>").text("Name : " + a + " " + b);
+			var item2 = $("<p></p>").text("Phone : " + a1);
+			var item3 = $("<p></p>").text("Email : " + a2);
+			var item4 = $("<p></p>").text("Date : " + a3);
+			var item1a = $("<p></p>").text("Time : " + a4);
+			var item2a = $("<p></p>").text("Children : " + a5);
+			var item3a = $("<p></p>").text("Occasion : " + a6);
+			var item4c = $("<p></p>").text("Special Request : " + a7);
+
 			var itemmain1 = $("<ul class='col-md-6'></ul>").append(item1);
-			itemmain1.append(item2)
-			itemmain1.append(item3)
-			itemmain1.append(item4)
+			itemmain1.append(item2);
+			itemmain1.append(item3);
+			itemmain1.append(item4);
 			var itemmain2 = $("<ul class='col-md-6'></ul>").append(item1a);
-			itemmain2.append(item2a)
-			itemmain2.append(item3a)
-			var itemmain4 = $("<ul class='col itemboxreservation'></ul>").append(itemmain1)
-			itemmain4.append(itemmain2)
+			itemmain2.append(item2a);
+			itemmain2.append(item3a);
+			var itemmain4 = $("<ul class='col itemboxreservation'></ul>").append(itemmain1);
+			itemmain4.append(itemmain2);
 			var itemmain3 = $("<ul class='youarespeciallol'></ul>").append(item4c);
 			var itemmain = $("<li class='reservationitems'></li>").append(itemmain4);
-			itemmain.append(itemmain3)
-			//reservationitemlistA itemmain
+			itemmain.append(itemmain3);
+
 			var itemmaindiv = $("<ul class='reservationitemlist active'></ul>").append(itemmain);
-			$(".wahteverthiswillbe").append(itemmaindiv)
-			
+			$(".wahteverthiswillbe").append(itemmaindiv);
+		}
 	});
+
+	
 	const sort_AZ = document.querySelector('.buttonsortAZ');
 	const sort_ZA = document.querySelector('.buttonsortZA');
 	sort_AZ.addEventListener('click', function() {
