@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    // Clear stored username and password on page load
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
+
     // Function to check subscription status
     function checkSubscription() {
         let subscription = localStorage.getItem('subscription');
@@ -31,9 +35,9 @@ $(document).ready(function() {
     // Form submission for registration
     $('#register-form').submit(function(e) {
         e.preventDefault();
-        let username = $('#username').value;
-        let email = $('#email').value;
-        let password = $('#password').value;
+        let username = $('#username').val();
+        let email = $('#email').val();
+        let password = $('#password').val();
         localStorage.setItem('username', username);
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
@@ -46,11 +50,14 @@ $(document).ready(function() {
     // Form submission for login
     $('#login-form').submit(function(e) {
         e.preventDefault();
-        let username = $('#login-username').value;
-        let password = $('#login-password').value;
+        let username = $('#login-username').val();
+        let password = $('#login-password').val();
         let storedUsername = localStorage.getItem('username');
         let storedPassword = localStorage.getItem('password');
-        if (username === storedUsername && password === storedPassword) {
+
+        if (storedUsername === null) {
+            alert('Username tidak ditemukan!');
+        } else if (username === storedUsername && password === storedPassword) {
             $('.form-container').removeClass('active');
             $('#dashboard').addClass('active');
             $('#member-name').text(username);
@@ -65,8 +72,6 @@ $(document).ready(function() {
         $('.form-container').removeClass('active');
         $('#dashboard').removeClass('active');
         $('#login-form').addClass('active');
-        localStorage.removeItem('subscription'); // Remove subscription on logout
-        $('#subscription-status').text('Anda belum berlangganan.');
     });
 
     // Subscribe button click event
@@ -78,7 +83,7 @@ $(document).ready(function() {
     // Form submission for subscription
     $('#subscribe-form').submit(function(e) {
         e.preventDefault();
-        let subscriptionType = $('#subscription-type').value;
+        let subscriptionType = $('#subscription-type').val();
         localStorage.setItem('subscription', subscriptionType);
         if (subscriptionType === 'monthly') {
             alert('Anda berhasil berlangganan Bulanan - $10!');
