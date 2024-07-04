@@ -396,12 +396,33 @@ jQuery(document).ready(function ($) {
 			itemnamecheckout = document.createElement("li");
 			itemnamecheckout.classList.add("col-sm-10","text-left")
 			itemnamecheckoutA=document.createElement("p");
+			itemnamecheckoutA.innerHTML="Discount";
+			itemnamecheckout.appendChild(itemnamecheckoutA)
+			itemPricecheckout = document.createElement("li");
+			itemPricecheckout.classList.add("col-sm-2","text-right")
+			itemPricecheckouttxt=document.createElement("p");
+			let discount = Number(document.getElementById("langgananyangkerendah").innerHTML)
+			itemPricecheckouttxt.innerHTML=(discount+"%");
+			//itemPricecheckouttxt=langgananyangkerendah
+			itemPricecheckout.appendChild(itemPricecheckouttxt)
+			wahtevernameguh.appendChild(itemnamecheckout)
+			wahtevernameguh.appendChild(itemPricecheckout)
+			document.getElementById("CheckOutItems").appendChild(wahtevernameguh)
+
+		    wahtevernameguh=document.createElement("ul")
+			wahtevernameguh.setAttribute("id","Checkout-item")
+			itemnamecheckout = document.createElement("li");
+			itemnamecheckout.classList.add("col-sm-10","text-left")
+			itemnamecheckoutA=document.createElement("p");
 			itemnamecheckoutA.innerHTML="Total Price";
 			itemnamecheckout.appendChild(itemnamecheckoutA)
 			itemPricecheckout = document.createElement("li");
 			itemPricecheckout.classList.add("col-sm-2","text-right")
 			itemPricecheckouttxt=document.createElement("p");
-			itemPricecheckouttxt.innerHTML=("$"+totalcheckout);
+			
+			let moneydiscounted =totalcheckout+(totalcheckout-(totalcheckout*((100+discount)/100)))
+			itemPricecheckouttxt.innerHTML=("$"+moneydiscounted);
+			//itemPricecheckouttxt=langgananyangkerendah
 			itemPricecheckout.appendChild(itemPricecheckouttxt)
 			wahtevernameguh.appendChild(itemnamecheckout)
 			wahtevernameguh.appendChild(itemPricecheckout)

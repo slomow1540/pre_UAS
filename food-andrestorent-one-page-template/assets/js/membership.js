@@ -5,11 +5,14 @@ $(document).ready(function() {
 
     // Function to check subscription status
     function checkSubscription() {
-        let subscription = localStorage.getItem('subscription');
+        
+        let subscription = document.getElementById("subscriptionnnstatuss").textContent;
         if (subscription === 'monthly') {
-            $('#subscription-status').text('Langganan Anda: Bulanan - $10');
+            $('#subscription-status').text('Langganan Anda: Bulanan - $10 /// diskon makanan 5% di checkout');
+            $(".langgananyangkerendah").text(5)
         } else if (subscription === 'yearly') {
-            $('#subscription-status').text('Langganan Anda: Tahunan - $100');
+            $('#subscription-status').text('Langganan Anda: Tahunan - $100 /// diskon makanan 10% di checkout');
+            $(".langgananyangkerendah").text(10)
         } else {
             $('#subscription-status').text('Anda belum berlangganan.');
         }
@@ -84,7 +87,8 @@ $(document).ready(function() {
     $('#subscribe-form').submit(function(e) {
         e.preventDefault();
         let subscriptionType = $('#subscription-type').val();
-        localStorage.setItem('subscription', subscriptionType);
+        //subscriptionType
+        document.getElementById("subscriptionnnstatuss").innerHTML=subscriptionType;
         if (subscriptionType === 'monthly') {
             alert('Anda berhasil berlangganan Bulanan - $10!');
         } else if (subscriptionType === 'yearly') {
