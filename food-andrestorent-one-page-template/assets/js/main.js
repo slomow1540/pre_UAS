@@ -314,7 +314,7 @@ jQuery(document).ready(function ($) {
 
 	const Payeverything=document.querySelector(".Payeverything");
 	Payeverything.addEventListener('click',function(){
-		window.alert("terima kasih sudah membeli di tempat ini")
+		window.alert("Pembayaran berhasil! Terima kasih sudah berbelanja di restoran kami 😀")
 		document.getElementById("menucheckout").classList.remove("activeA")
 		document.getElementById("menucheckout").classList.add("inactiveA")
 		document.getElementById("menualllist").classList.remove("inactiveA")
