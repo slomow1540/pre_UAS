@@ -247,7 +247,7 @@ jQuery(document).ready(function ($) {
 			itemmain2.append(item3a)
 			var itemmain4 = $("<ul class='col itemboxreservation'></ul>").append(itemmain1)
 			itemmain4.append(itemmain2)
-			var itemmain3 = $("<ul></ul>").append(item4c);
+			var itemmain3 = $("<ul class='youarespeciallol'></ul>").append(item4c);
 			var itemmain = $("<li class='reservationitems'></li>").append(itemmain4);
 			itemmain.append(itemmain3)
 			//reservationitemlistA itemmain

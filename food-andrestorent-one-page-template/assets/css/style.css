@@ -1653,11 +1653,19 @@ button.clickheretopayup:hover{
 }
 
 .reservationitemlist{
-    background-color: white;
+    display: flex;
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../images/newsbg.jpg);
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;	
     border-radius: 10px;
     margin: 10px;
-    width: 1200px;
-    height: 300px;
+    margin-left: 10%;
+    width: 900px;
+    height: 220px;
+    text-align: left;
 }
 
 .reservationitemlistA{
@@ -1665,11 +1673,17 @@ button.clickheretopayup:hover{
     flex-direction: row;
     margin-left: 30px;
     margin-right: 30px;
+    text-align: left;
 }
 
 .itemboxreservation{
     width: 1000px;
     height: 150px;
+    text-align: left;
+}
+
+.itemboxreservation{
+    text-align: left;
 }
 
 .wahteverthiswillbe {
@@ -1677,4 +1691,16 @@ button.clickheretopayup:hover{
     font-family:'Times New Roman', Times, serif;
     font-size: 25px;
     font-weight: 700;
+    text-align: left;
+}
+.youarespeciallol{
+    margin-left: 10px;
+    display: flex;
+    width: 890px;
+    height: 70px;
+    overflow: auto;
+}
+.reservationitemlist p{
+    text-align: left;
+    color: white;
 }
