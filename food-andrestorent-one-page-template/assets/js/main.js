@@ -166,6 +166,7 @@ function UpdateItemList(){
 			let a = document.getElementById(("MenuItemID"+i)).children[0].textContent 
 			if(a == menuitems[j][0]){
 				document.getElementById(("MenuItemID"+i)).children[5].innerHTML=("$"+(menuitems[j][2]*menuitems[j][4]))
+				document.getElementById(("MenuItemID"+i)).children[3].innerHTML=(menuitems[j][4])
 				break
 			}
 		}
@@ -311,8 +312,48 @@ jQuery(document).ready(function ($) {
 		UpdateItemList()
 	});
 
+	const Payeverything=document.querySelector(".Payeverything");
+	Payeverything.addEventListener('click',function(){
+		window.alert("terima kasih sudah membeli di tempat ini")
+		document.getElementById("menucheckout").classList.remove("activeA")
+		document.getElementById("menucheckout").classList.add("inactiveA")
+		document.getElementById("menualllist").classList.remove("inactiveA")
+		document.getElementById("menualllist").classList.add("activeA")
+		document.getElementById("clickheretopayup").classList.remove("inactiveA")
+		document.getElementById("clickheretopayup").classList.add("activeA")
+		document.getElementById("searchbarstuff").classList.remove("inactiveA")
+		document.getElementById("searchbarstuff").classList.add("activeA")
+		document.getElementById("buttonsortAZ").classList.remove("inactiveA")
+		document.getElementById("buttonsortAZ").classList.add("activeA")
+		document.getElementById("buttonsortZA").classList.remove("inactiveA")
+		document.getElementById("buttonsortZA").classList.add("activeA")
+		for(let i=0;i<menuitems.length;i++){
+			menuitems[i][4]=0;
+		}
+		UpdateItemList()
+	});
+
 	const clickheretopayup = document.querySelector('.clickheretopayup');
 	clickheretopayup.addEventListener('click', function() {
+		//document.getElementById("CheckOutItems")
+		document.getElementById("CheckOutItems").innerHTML="";
+		let wahtevernameguh=document.createElement("ul")
+		wahtevernameguh.setAttribute("id","Checkout-item")
+		let itemnamecheckout = document.createElement("li");
+		itemnamecheckout.classList.add("col-sm-10","text-left")
+		let itemnamecheckoutA=document.createElement("p");
+		itemnamecheckoutA.innerHTML="Item Name";
+		itemnamecheckout.appendChild(itemnamecheckoutA)
+		let itemPricecheckout = document.createElement("li");
+		itemPricecheckout.classList.add("col-sm-2","text-right")
+		let itemPricecheckouttxt=document.createElement("p");
+		itemPricecheckouttxt.innerHTML="Price";
+		itemPricecheckout.appendChild(itemPricecheckouttxt)
+		wahtevernameguh.appendChild(itemnamecheckout)
+		wahtevernameguh.appendChild(itemPricecheckout)
+
+		document.getElementById("CheckOutItems").appendChild(wahtevernameguh)
+
 		let totalcheckout=0;
 		document.getElementById("menucheckout").classList.remove("inactiveA")
 		document.getElementById("menucheckout").classList.add("activeA")
@@ -350,16 +391,16 @@ jQuery(document).ready(function ($) {
 
 			}
 		  }
-		  let wahtevernameguh=document.createElement("ul")
+		    wahtevernameguh=document.createElement("ul")
 			wahtevernameguh.setAttribute("id","Checkout-item")
-			let itemnamecheckout = document.createElement("li");
+			itemnamecheckout = document.createElement("li");
 			itemnamecheckout.classList.add("col-sm-10","text-left")
-			let itemnamecheckoutA=document.createElement("p");
+			itemnamecheckoutA=document.createElement("p");
 			itemnamecheckoutA.innerHTML="Total Price";
 			itemnamecheckout.appendChild(itemnamecheckoutA)
-			let itemPricecheckout = document.createElement("li");
+			itemPricecheckout = document.createElement("li");
 			itemPricecheckout.classList.add("col-sm-2","text-right")
-			let itemPricecheckouttxt=document.createElement("p");
+			itemPricecheckouttxt=document.createElement("p");
 			itemPricecheckouttxt.innerHTML=("$"+totalcheckout);
 			itemPricecheckout.appendChild(itemPricecheckouttxt)
 			wahtevernameguh.appendChild(itemnamecheckout)
