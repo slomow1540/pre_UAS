@@ -26,6 +26,8 @@ event Section
 
         <!--Theme custom css -->
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/komentar.css">
+        <link rel="stylesheet" href="assets/css/membership.css">
 
         <!--Theme Responsive css-->
         <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -190,6 +192,22 @@ event Section
                     </div>
                 </div>
             </section>
+
+            <section id="komentar" class="komentar">
+                <div class="container">
+                    <div class="row">
+                        <div class="comments">
+                            <h4>Komentar</h4>
+                            <form id="commentForm">
+                                <textarea id="commentText" placeholder="Tulis Komentar Anda di sini..."></textarea>
+                                <button type="submit" id="submitComment">Kirim</button>
+                            </form>
+                            <div id="commentList">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
             <section id="mobaileapps" class="mobailapps">
                 <div class="slider_overlay">
@@ -212,7 +230,8 @@ event Section
                         </div>
                     </div>
                 </div>
-            </section>  
+            </section>
+            
         </div>
 
         <!--Event Section-->
@@ -238,7 +257,7 @@ event Section
                 </div>
             </section>
 
-            <!-- second choises-->
+            <!-- second choices-->
             <section id="choice" class="choice">
                 <div class="container" id="targeteventcontaineranimate">
                     <div class="row">
@@ -758,5 +777,7 @@ event Section
         <script src="assets/js/main.js"></script>
         <script src="assets/js/events.js"></script>
         <script src="assets/js/highlight.js"></script>
+        <script src="assets/js/membership.js"></script>
+        <script src="assets/js/komentar.js"></script>
     </body>
 </html>

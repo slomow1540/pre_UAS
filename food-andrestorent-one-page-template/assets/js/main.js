@@ -225,13 +225,13 @@ jQuery(document).ready(function ($) {
 			let a5 =document.getElementById("reservationselect").value//reservationselect
 			let a6 =document.getElementById("reservationoccation").value//reservationoccation
 			let a7 =document.getElementById("reservationrequest").value //reservationrequest
-			var item1 = $("<p></p>").text("Name  : "+a+" "+ b); // name
+			var item1 = $("<p></p>").text("Name : "+a+" "+ b); // name
 			var item2 = $("<p></p>").text("Phone : "+a1); //reservationphone
-			var item3 = $("<p></p>").text("Email  : "+a2); //email
-			var item4 = $("<p></p>").text("Date   : "+a3); //reservationdate
-			var item1a = $("<p></p>").text("Time      : "+a4); // time
+			var item3 = $("<p></p>").text("Email : "+a2); //email
+			var item4 = $("<p></p>").text("Date : "+a3); //reservationdate
+			var item1a = $("<p></p>").text("Time : "+a4); // time
 			var item2a = $("<p></p>").text("Childrens : "+a5); //select
-			var item3a = $("<p></p>").text("Occasion  : "+a6); //occation
+			var item3a = $("<p></p>").text("Occasion : "+a6); //occation
 			var item4c = $("<p></p>").text("Special Request : "+a7); //request
 			
 			

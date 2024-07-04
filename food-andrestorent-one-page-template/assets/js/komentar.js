@@ -21,7 +21,7 @@ $(document).ready(function() {
     function getCurrentDateTime() {
         var now = new Date();
         var date = now.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-        var time = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric' });
+        var time = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric'});
         return date + ' ' + time;
     }
 });
