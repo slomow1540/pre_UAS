@@ -11,7 +11,7 @@ const menuitems=[
 	["Tropical Sunset Cocktail","tropicalSunset",10.00,"Drinks",0],
 	["Matcha Madness Latte","matchaMadnessLatte",5.75,"Drinks",0],
 	["Citrus Splash Refresher","citrusSplashRefresher",6.00,"Drinks",0],
-	["Minty MOjito Mocktail","mintyMojito",9.00,"Drinks",0],
+	["Minty Mojito Mocktail","mintyMojito",9.00,"Drinks",0],
 	["Spaghetti Carbonara","spaghettiCarbonara",6.75,"Main Courses",0],
 	["Grilled Chicken Breast","grilledChickenBreast",14.00,"Main Courses",0],
 	["Beef Steak","beefSteak",18.00,"Main Courses",0],
@@ -225,19 +225,17 @@ jQuery(document).ready(function ($) {
 			let a5 =document.getElementById("reservationselect").value//reservationselect
 			let a6 =document.getElementById("reservationoccation").value//reservationoccation
 			let a7 =document.getElementById("reservationrequest").value //reservationrequest
-			var item1 = $("<p></p>").text("Name = "+a+" "+ b); // name
-			var item2 = $("<p></p>").text("Phone = "+a1); //reservationphone
-			var item3 = $("<p></p>").text("email = "+a2); //email
-			var item4 = $("<p></p>").text("date = "+a3); //reservationdate
-			var item1a = $("<p></p>").text("time = "+a4); // time
-			var item2a = $("<p></p>").text("childrens = "+a5); //select
-			var item3a = $("<p></p>").text("Occasion = "+a6); //occation
+			var item1 = $("<p></p>").text("Name  : "+a+" "+ b); // name
+			var item2 = $("<p></p>").text("Phone : "+a1); //reservationphone
+			var item3 = $("<p></p>").text("Email  : "+a2); //email
+			var item4 = $("<p></p>").text("Date   : "+a3); //reservationdate
+			var item1a = $("<p></p>").text("Time      : "+a4); // time
+			var item2a = $("<p></p>").text("Childrens : "+a5); //select
+			var item3a = $("<p></p>").text("Occasion  : "+a6); //occation
+			var item4c = $("<p></p>").text("Special Request : "+a7); //request
+			
+			
 
-			var item4c = $("<p></p>").text("special request = "+a7); //request
-			
-			
-			
-			
 			
 			var itemmain1 = $("<ul class='col-md-6'></ul>").append(item1);
 			itemmain1.append(item2)
