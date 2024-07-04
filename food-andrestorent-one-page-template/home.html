@@ -90,7 +90,7 @@ event Section
                                         <li><a href="#Event" class="TopBarEvent">Events</a></li>
                                         <li><a href="#portofolio" class="TopBarHighlight">Highlight</a></li>
                                         <li><a href="#Menu" class="TopBarMenu">Menu</a></li>
-                                        <li><a href="#mobaileapps">Pages</a></li>
+                                        <li><a href="#Membership" class="TopBarMembership">Membership</a></li>
                                         <li><a href="#reservation" class="TopBarreservation">Reservation</a></li>
                                     </ul>
                                 </div><!-- /.navbar-collapse -->
@@ -529,6 +529,62 @@ event Section
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Membership Section -->
+        <div class="MembershipGroup inactiveA">
+            <section id="membership" class="membership">
+                <div class="container">
+                    <div class="row">
+                        <div id="membership-form" class="form-container active">
+                            <h2>Daftar Member</h2>
+                            <form id="register-form">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" name="username" required>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                                <button type="submit">Daftar</button>
+                            </form>
+                            <p>Sudah punya akun? <a href="#" id="show-login">Login di sini</a></p>
+                        </div>
+            
+                        <div id="login-form" class="form-container">
+                            <h2>Login Member</h2>
+                            <form id="login-form">
+                                <label for="login-username">Username:</label>
+                                <input type="text" id="login-username" name="login-username" required>
+                                <label for="login-password">Password:</label>
+                                <input type="password" id="login-password" name="login-password" required>
+                                <button type="submit">Login</button>
+                            </form>
+                            <p>Belum punya akun? <a href="#" id="show-register">Daftar di sini</a></p>
+                        </div>
+            
+                        <div id="dashboard" class="dashboard-container">
+                            <h2>Dashboard Member</h2>
+                            <p>Selamat datang, <span id="member-name"></span>!</p>
+                            <div id="subscription-status"></div>
+                            <button id="subscribe">Berlangganan</button>
+                            <button id="logout">Logout</button>
+                        </div>
+            
+                        <div id="subscription-form" class="form-container">
+                            <h2>Pilih Paket Langganan</h2>
+                            <form id="subscribe-form">
+                                <label for="subscription-type">Jenis Langganan:</label>
+                                <select id="subscription-type" name="subscription-type">
+                                    <option value="monthly">Bulanan - $10</option>
+                                    <option value="yearly">Tahunan - $100</option>
+                                </select>
+                                <button type="submit">Langganan</button>
+                            </form>
+                            <button id="cancel-subscription">Batal</button>
                         </div>
                     </div>
                 </div>

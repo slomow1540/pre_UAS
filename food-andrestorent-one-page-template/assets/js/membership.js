@@ -31,9 +31,9 @@ $(document).ready(function() {
     // Form submission for registration
     $('#register-form').submit(function(e) {
         e.preventDefault();
-        let username = $('#username').val();
-        let email = $('#email').val();
-        let password = $('#password').val();
+        let username = $('#username').value;
+        let email = $('#email').value;
+        let password = $('#password').value;
         localStorage.setItem('username', username);
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
@@ -46,8 +46,8 @@ $(document).ready(function() {
     // Form submission for login
     $('#login-form').submit(function(e) {
         e.preventDefault();
-        let username = $('#login-username').val();
-        let password = $('#login-password').val();
+        let username = $('#login-username').value;
+        let password = $('#login-password').value;
         let storedUsername = localStorage.getItem('username');
         let storedPassword = localStorage.getItem('password');
         if (username === storedUsername && password === storedPassword) {
@@ -78,7 +78,7 @@ $(document).ready(function() {
     // Form submission for subscription
     $('#subscribe-form').submit(function(e) {
         e.preventDefault();
-        let subscriptionType = $('#subscription-type').val();
+        let subscriptionType = $('#subscription-type').value;
         localStorage.setItem('subscription', subscriptionType);
         if (subscriptionType === 'monthly') {
             alert('Anda berhasil berlangganan Bulanan - $10!');

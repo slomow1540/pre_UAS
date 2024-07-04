@@ -250,7 +250,7 @@ jQuery(document).ready(function ($) {
 			var itemmain = $("<li class='reservationitems'></li>").append(itemmain4);
 			itemmain.append(itemmain3)
 			//reservationitemlistA itemmain
-			var itemmaindiv = $("<ul class='reservationitemlist active'></ul>").append(itemmain);
+			var itemmaindiv = $("<div class='reservationitemlist active'></div>").append(itemmain);
 			$(".wahteverthiswillbe").append(itemmaindiv)
 			
 	});
@@ -413,6 +413,12 @@ jQuery(document).ready(function ($) {
 	reservationButton.addEventListener('click', function() {
 		displayPage(".reservationGroup",currPage)
 		currPage = ".reservationGroup";
+	});
+
+	const MembershipButton = document.querySelector('.TopBarMembership');
+	MembershipButton.addEventListener('click', function() {
+		displayPage(".MembershipGroup",currPage)
+		currPage = ".MembershipGroup";
 	});
 
 	function displayPage(gotopage,currentpage){
